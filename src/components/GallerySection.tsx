@@ -1,30 +1,45 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-import galleryGrazing from "@/assets/gallery-grazing.jpg";
-import galleryMilking from "@/assets/gallery-milking.jpg";
-import galleryGoats from "@/assets/gallery-goats.jpg";
-import galleryCalves from "@/assets/gallery-calves.jpg";
-import galleryDelivery from "@/assets/gallery-delivery.jpg";
-import galleryFeeds from "@/assets/gallery-feeds.jpg";
+import galleryCow1 from "@/assets/gallery-cow-1.jpg";
+import galleryCow2 from "@/assets/gallery-cow-2.jpg";
+import galleryCow3 from "@/assets/gallery-cow-3.jpg";
+import galleryCow4 from "@/assets/gallery-cow-4.jpg";
+import galleryGoat1 from "@/assets/gallery-goat-1.jpg";
+import galleryGoat2 from "@/assets/gallery-goat-2.jpg";
+import galleryGoat3 from "@/assets/gallery-goat-3.jpg";
+import galleryGoat4 from "@/assets/gallery-goat-4.jpg";
+import galleryGoat5 from "@/assets/gallery-goat-5.jpg";
+import galleryGoat6 from "@/assets/gallery-goat-6.jpg";
 
-const photos = [
-  { src: galleryGrazing, alt: "Holstein Friesian cows grazing on green pastures", caption: "Our Dairy Herd Grazing" },
-  { src: galleryMilking, alt: "Dairy cows at the milking station", caption: "Healthy Milking Cows" },
-  { src: galleryGoats, alt: "Saanen dairy goats in their pen", caption: "Saanen Dairy Goats" },
-  { src: galleryCalves, alt: "Young dairy calves in the barn", caption: "Pedigree Calves" },
-  { src: galleryDelivery, alt: "Livestock delivery across Kenya", caption: "Countrywide Delivery" },
-  { src: galleryFeeds, alt: "Quality animal feeds and hay bales", caption: "Premium Animal Feeds" },
+type Category = "all" | "cows" | "goats";
+
+const allPhotos = [
+  { src: galleryCow1, alt: "Ayrshire dairy cow at Delamere Farm", caption: "Ayrshire Dairy Cow", category: "cows" as const },
+  { src: galleryCow2, alt: "Dairy cow rear view showing healthy build", caption: "Healthy Dairy Cow", category: "cows" as const },
+  { src: galleryCow3, alt: "Farm manager with dairy cow", caption: "Quality Livestock Inspection", category: "cows" as const },
+  { src: galleryCow4, alt: "Dairy cow being inspected at the farm", caption: "Veterinary Check-up", category: "cows" as const },
+  { src: galleryGoat1, alt: "Dorper sheep in pen at Delamere Farm", caption: "Dorper Sheep Flock", category: "goats" as const },
+  { src: galleryGoat2, alt: "Sheep and lambs in the barn", caption: "Ewes & Lambs", category: "goats" as const },
+  { src: galleryGoat3, alt: "Dorper goats in their pen", caption: "Dorper Goats", category: "goats" as const },
+  { src: galleryGoat4, alt: "Sheep flock feeding in the barn", caption: "Flock Feeding Time", category: "goats" as const },
+  { src: galleryGoat5, alt: "Two Dorper sheep close-up", caption: "Healthy Dorper Pair", category: "goats" as const },
+  { src: galleryGoat6, alt: "Young Dorper lambs in outdoor pen", caption: "Young Lambs", category: "goats" as const },
+];
+
+const categories: { label: string; value: Category }[] = [
+  { label: "All", value: "all" },
+  { label: "🐄 Dairy Cows", value: "cows" },
+  { label: "🐑 Goats & Sheep", value: "goats" },
 ];
 
 const GallerySection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const prev = () => setCurrentIndex((i) => (i === 0 ? photos.length - 1 : i - 1));
-  const next = () => setCurrentIndex((i) => (i === photos.length - 1 ? 0 : i + 1));
+  const photos = activeCategory === "all" ? allPhotos : allPhotos.filter((p) => p.category === activeCategory);
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -33,15 +48,6 @@ const GallerySection = () => {
 
   const lightboxPrev = () => setLightboxIndex((i) => (i === 0 ? photos.length - 1 : i - 1));
   const lightboxNext = () => setLightboxIndex((i) => (i === photos.length - 1 ? 0 : i + 1));
-
-  // Show 3 images at a time on desktop, 1 on mobile
-  const getVisibleIndices = () => {
-    const indices = [];
-    for (let offset = -1; offset <= 1; offset++) {
-      indices.push((currentIndex + offset + photos.length) % photos.length);
-    }
-    return indices;
-  };
 
   return (
     <section id="gallery" className="bg-secondary/10 py-16 md:py-24">
@@ -56,73 +62,40 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* Carousel */}
-        <div className="relative mx-auto max-w-5xl">
-          <button
-            onClick={prev}
-            className="absolute -left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition hover:bg-primary/90 md:-left-6"
-            aria-label="Previous photo"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-
-          {/* Mobile: single image */}
-          <div className="block md:hidden">
-            <div
-              className="cursor-pointer overflow-hidden rounded-xl shadow-lg"
-              onClick={() => openLightbox(currentIndex)}
+        {/* Category Filter */}
+        <div className="mb-8 flex flex-wrap justify-center gap-3">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              onClick={() => setActiveCategory(cat.value)}
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+                activeCategory === cat.value
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-card text-foreground hover:bg-primary/10"
+              }`}
             >
-              <img
-                src={photos[currentIndex].src}
-                alt={photos[currentIndex].alt}
-                className="aspect-[3/2] w-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <div className="bg-card px-4 py-3">
-                <p className="text-sm font-semibold text-foreground">{photos[currentIndex].caption}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop: 3 images */}
-          <div className="hidden gap-4 md:grid md:grid-cols-3">
-            {getVisibleIndices().map((photoIndex) => (
-              <div
-                key={photoIndex}
-                className="cursor-pointer overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
-                onClick={() => openLightbox(photoIndex)}
-              >
-                <img
-                  src={photos[photoIndex].src}
-                  alt={photos[photoIndex].alt}
-                  className="aspect-[3/2] w-full object-cover"
-                />
-                <div className="bg-card px-4 py-3">
-                  <p className="text-sm font-semibold text-foreground">{photos[photoIndex].caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <button
-            onClick={next}
-            className="absolute -right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition hover:bg-primary/90 md:-right-6"
-            aria-label="Next photo"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
+              {cat.label}
+            </button>
+          ))}
         </div>
 
-        {/* Dots */}
-        <div className="mt-6 flex justify-center gap-2">
-          {photos.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentIndex(i)}
-              className={`h-2.5 w-2.5 rounded-full transition-all ${
-                i === currentIndex ? "scale-125 bg-primary" : "bg-primary/30"
-              }`}
-              aria-label={`Go to photo ${i + 1}`}
-            />
+        {/* Grid */}
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {photos.map((photo, i) => (
+            <div
+              key={photo.src}
+              className="group cursor-pointer overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              onClick={() => openLightbox(i)}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="bg-card px-3 py-2">
+                <p className="text-xs font-semibold text-foreground md:text-sm">{photo.caption}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -132,12 +105,12 @@ const GallerySection = () => {
         <DialogContent className="max-w-4xl border-none bg-transparent p-0 shadow-none">
           <div className="relative">
             <img
-              src={photos[lightboxIndex].src}
-              alt={photos[lightboxIndex].alt}
+              src={photos[lightboxIndex]?.src}
+              alt={photos[lightboxIndex]?.alt}
               className="w-full rounded-lg object-contain"
             />
             <p className="mt-2 text-center text-sm font-semibold text-primary-foreground">
-              {photos[lightboxIndex].caption}
+              {photos[lightboxIndex]?.caption}
             </p>
             <button
               onClick={lightboxPrev}
