@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LivestockCard from "@/components/LivestockCard";
+import GallerySection from "@/components/GallerySection";
 import FeedsSection from "@/components/FeedsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -101,6 +102,7 @@ const Index = () => {
         </div>
       </section>
 
+      <GallerySection />
       <FeedsSection />
       <ContactSection />
       <Footer />
