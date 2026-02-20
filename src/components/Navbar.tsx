@@ -16,6 +16,7 @@ const Navbar = () => (
         <a href="#dairy-cows" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Dairy Cows</a>
         <a href="#dairy-goats" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Dairy Goats</a>
         <a href="#feeds" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Feeds & Supplies</a>
+        <a href="#gallery" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Gallery</a>
         <a href="#contact" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Contact</a>
       </div>
       <a
