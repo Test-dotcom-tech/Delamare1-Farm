@@ -12,6 +12,11 @@ import galleryGoat3 from "@/assets/gallery-goat-3.jpg";
 import galleryGoat4 from "@/assets/gallery-goat-4.jpg";
 import galleryGoat5 from "@/assets/gallery-goat-5.jpg";
 import galleryGoat6 from "@/assets/gallery-goat-6.jpg";
+import galleryGoat7 from "@/assets/gallery-goat-7.jpg";
+import galleryGoat8 from "@/assets/gallery-goat-8.jpg";
+import galleryGoat9 from "@/assets/gallery-goat-9.jpg";
+import galleryGoat10 from "@/assets/gallery-goat-10.jpg";
+import galleryGoat11 from "@/assets/gallery-goat-11.jpg";
 import galleryFeeds1 from "@/assets/gallery-feeds-1.jpg";
 import galleryFeeds2 from "@/assets/gallery-feeds-2.jpg";
 import galleryFeeds3 from "@/assets/gallery-feeds-3.jpg";
@@ -21,6 +26,11 @@ import galleryFeeds6 from "@/assets/gallery-feeds-6.jpg";
 import galleryFeeds7 from "@/assets/gallery-feeds-7.jpg";
 import galleryFeeds8 from "@/assets/gallery-feeds-8.jpg";
 import galleryFeeds9 from "@/assets/gallery-feeds-9.jpg";
+import galleryFeeds10 from "@/assets/gallery-feeds-10.jpg";
+import galleryFeeds11 from "@/assets/gallery-feeds-11.jpg";
+import galleryFeeds12 from "@/assets/gallery-feeds-12.jpg";
+import galleryFeeds13 from "@/assets/gallery-feeds-13.jpg";
+import galleryFeeds14 from "@/assets/gallery-feeds-14.jpg";
 
 type Category = "all" | "cows" | "goats" | "feeds";
 
@@ -35,6 +45,11 @@ const allPhotos = [
   { src: galleryGoat4, alt: "Sheep flock feeding in the barn", caption: "Flock Feeding Time", category: "goats" as const },
   { src: galleryGoat5, alt: "Two Dorper sheep close-up", caption: "Healthy Dorper Pair", category: "goats" as const },
   { src: galleryGoat6, alt: "Young Dorper lambs in outdoor pen", caption: "Young Lambs", category: "goats" as const },
+  { src: galleryGoat7, alt: "Goats in barn with hay", caption: "Goats in Barn", category: "goats" as const },
+  { src: galleryGoat8, alt: "Dairy goat with full udder", caption: "High-Yield Dairy Goat", category: "goats" as const },
+  { src: galleryGoat9, alt: "Mother goat with kids", caption: "Doe & Kids", category: "goats" as const },
+  { src: galleryGoat10, alt: "Saanen goat nursing kids in barn", caption: "Saanen Nursing", category: "goats" as const },
+  { src: galleryGoat11, alt: "Saanen dairy goat herd", caption: "Saanen Herd", category: "goats" as const },
   { src: galleryFeeds1, alt: "Organic fertilizer bags and farm chemicals", caption: "Organic Fertilizer", category: "feeds" as const },
   { src: galleryFeeds2, alt: "AgriFlora certified organic fertilizer bag", caption: "AgriFlora Fertilizer", category: "feeds" as const },
   { src: galleryFeeds3, alt: "Feed pellets being weighed on scale", caption: "Feed Pellets", category: "feeds" as const },
@@ -44,6 +59,11 @@ const allPhotos = [
   { src: galleryFeeds7, alt: "Fresh cut lucerne in the field", caption: "Lucerne Harvest", category: "feeds" as const },
   { src: galleryFeeds8, alt: "Packaged lucerne seeds 1kg", caption: "Lucerne Seeds", category: "feeds" as const },
   { src: galleryFeeds9, alt: "Stacked premium hay bales", caption: "Premium Hay Stock", category: "feeds" as const },
+  { src: galleryFeeds10, alt: "Hygrow organic fertilizer 50kg bag", caption: "Hygrow Fertilizer", category: "feeds" as const },
+  { src: galleryFeeds11, alt: "Evergrow organic fertilizer with NPK", caption: "Evergrow Fertilizer", category: "feeds" as const },
+  { src: galleryFeeds12, alt: "Black Gold organic fertilizer bag", caption: "Black Gold Fertilizer", category: "feeds" as const },
+  { src: galleryFeeds13, alt: "Hygrow organic fertilizer product info", caption: "Hygrow Product Info", category: "feeds" as const },
+  { src: galleryFeeds14, alt: "Hygrow organic fertilizer poster", caption: "Hygrow Benefits", category: "feeds" as const },
 ];
 
 const categories: { label: string; value: Category }[] = [
