@@ -20,10 +20,18 @@ import galleryGoat11 from "@/assets/gallery-goat-11.jpg";
 import galleryGoat12 from "@/assets/gallery-goat-12.jpg";
 import galleryGoat13 from "@/assets/gallery-goat-13.jpg";
 import galleryGoat14 from "@/assets/gallery-goat-14.jpg";
+import galleryGoat15 from "@/assets/gallery-goat-15.jpg";
+import galleryGoat16 from "@/assets/gallery-goat-16.jpg";
+import galleryGoat17 from "@/assets/gallery-goat-17.jpg";
+import galleryGoat18 from "@/assets/gallery-goat-18.jpg";
 import galleryCow5 from "@/assets/gallery-cow-5.jpg";
 import galleryCow6 from "@/assets/gallery-cow-6.jpg";
 import galleryCow7 from "@/assets/gallery-cow-7.jpg";
 import galleryCow8 from "@/assets/gallery-cow-8.jpg";
+import galleryCow9 from "@/assets/gallery-cow-9.jpg";
+import galleryCow10 from "@/assets/gallery-cow-10.jpg";
+import galleryCow11 from "@/assets/gallery-cow-11.jpg";
+import galleryCow12 from "@/assets/gallery-cow-12.jpg";
 import galleryFeeds1 from "@/assets/gallery-feeds-1.jpg";
 import galleryFeeds2 from "@/assets/gallery-feeds-2.jpg";
 import galleryFeeds3 from "@/assets/gallery-feeds-3.jpg";
@@ -38,6 +46,7 @@ import galleryFeeds11 from "@/assets/gallery-feeds-11.jpg";
 import galleryFeeds12 from "@/assets/gallery-feeds-12.jpg";
 import galleryFeeds13 from "@/assets/gallery-feeds-13.jpg";
 import galleryFeeds14 from "@/assets/gallery-feeds-14.jpg";
+import galleryFeeds15 from "@/assets/gallery-feeds-15.jpg";
 
 type Category = "all" | "cows" | "goats" | "feeds";
 
@@ -60,10 +69,18 @@ const allPhotos = [
   { src: galleryGoat12, alt: "Mother goat with newborn kid in barn", caption: "Goat & Newborn Kid", category: "goats" as const },
   { src: galleryGoat13, alt: "Boer goat herd outdoors", caption: "Boer Goat Herd", category: "goats" as const },
   { src: galleryGoat14, alt: "Tagged Boer goats close-up", caption: "Tagged Boer Goats", category: "goats" as const },
+  { src: galleryGoat15, alt: "Saanen goat herd in barn", caption: "Saanen Herd Barn", category: "goats" as const },
+  { src: galleryGoat16, alt: "Saanen dairy goat close-up", caption: "Saanen Close-Up", category: "goats" as const },
+  { src: galleryGoat17, alt: "High-yield Saanen with full udder", caption: "High-Yield Saanen", category: "goats" as const },
+  { src: galleryGoat18, alt: "Large Saanen goat herd in facility", caption: "Saanen Facility", category: "goats" as const },
   { src: galleryCow5, alt: "Holstein Friesian cows in milking shed", caption: "Milking Shed", category: "cows" as const },
   { src: galleryCow6, alt: "Dairy cow herd in farm barn", caption: "Cow Herd in Barn", category: "cows" as const },
   { src: galleryCow7, alt: "Dairy cows feeding at trough", caption: "Cows at Feeding Trough", category: "cows" as const },
   { src: galleryCow8, alt: "Dairy cows resting in cubicles", caption: "Cows Resting", category: "cows" as const },
+  { src: galleryCow9, alt: "Holstein Friesian herd in paddock", caption: "Friesian Herd Outdoors", category: "cows" as const },
+  { src: galleryCow10, alt: "Dairy cows feeding at trough indoors", caption: "Indoor Feeding", category: "cows" as const },
+  { src: galleryCow11, alt: "Farm manager tending to dairy cows", caption: "Farm Manager at Work", category: "cows" as const },
+  { src: galleryCow12, alt: "Dairy cows resting in cubicles", caption: "Cows Resting in Barn", category: "cows" as const },
   { src: galleryFeeds1, alt: "Organic fertilizer bags and farm chemicals", caption: "Organic Fertilizer", category: "feeds" as const },
   { src: galleryFeeds2, alt: "AgriFlora certified organic fertilizer bag", caption: "AgriFlora Fertilizer", category: "feeds" as const },
   { src: galleryFeeds3, alt: "Feed pellets being weighed on scale", caption: "Feed Pellets", category: "feeds" as const },
@@ -78,6 +95,7 @@ const allPhotos = [
   { src: galleryFeeds12, alt: "Black Gold organic fertilizer bag", caption: "Black Gold Fertilizer", category: "feeds" as const },
   { src: galleryFeeds13, alt: "Hygrow organic fertilizer product info", caption: "Hygrow Product Info", category: "feeds" as const },
   { src: galleryFeeds14, alt: "Hygrow organic fertilizer poster", caption: "Hygrow Benefits", category: "feeds" as const },
+  { src: galleryFeeds15, alt: "Feed pellets weighed on digital scale", caption: "Feed Pellets Weighed", category: "feeds" as const },
 ];
 
 const categories: { label: string; value: Category }[] = [
