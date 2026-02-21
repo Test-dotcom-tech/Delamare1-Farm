@@ -12,8 +12,17 @@ import galleryGoat3 from "@/assets/gallery-goat-3.jpg";
 import galleryGoat4 from "@/assets/gallery-goat-4.jpg";
 import galleryGoat5 from "@/assets/gallery-goat-5.jpg";
 import galleryGoat6 from "@/assets/gallery-goat-6.jpg";
+import galleryFeeds1 from "@/assets/gallery-feeds-1.jpg";
+import galleryFeeds2 from "@/assets/gallery-feeds-2.jpg";
+import galleryFeeds3 from "@/assets/gallery-feeds-3.jpg";
+import galleryFeeds4 from "@/assets/gallery-feeds-4.jpg";
+import galleryFeeds5 from "@/assets/gallery-feeds-5.jpg";
+import galleryFeeds6 from "@/assets/gallery-feeds-6.jpg";
+import galleryFeeds7 from "@/assets/gallery-feeds-7.jpg";
+import galleryFeeds8 from "@/assets/gallery-feeds-8.jpg";
+import galleryFeeds9 from "@/assets/gallery-feeds-9.jpg";
 
-type Category = "all" | "cows" | "goats";
+type Category = "all" | "cows" | "goats" | "feeds";
 
 const allPhotos = [
   { src: galleryCow1, alt: "Ayrshire dairy cow at Delamere Farm", caption: "Ayrshire Dairy Cow", category: "cows" as const },
@@ -26,12 +35,22 @@ const allPhotos = [
   { src: galleryGoat4, alt: "Sheep flock feeding in the barn", caption: "Flock Feeding Time", category: "goats" as const },
   { src: galleryGoat5, alt: "Two Dorper sheep close-up", caption: "Healthy Dorper Pair", category: "goats" as const },
   { src: galleryGoat6, alt: "Young Dorper lambs in outdoor pen", caption: "Young Lambs", category: "goats" as const },
+  { src: galleryFeeds1, alt: "Organic fertilizer bags and farm chemicals", caption: "Organic Fertilizer", category: "feeds" as const },
+  { src: galleryFeeds2, alt: "AgriFlora certified organic fertilizer bag", caption: "AgriFlora Fertilizer", category: "feeds" as const },
+  { src: galleryFeeds3, alt: "Feed pellets being weighed on scale", caption: "Feed Pellets", category: "feeds" as const },
+  { src: galleryFeeds4, alt: "Quality grain seeds in hand", caption: "Quality Seeds", category: "feeds" as const },
+  { src: galleryFeeds5, alt: "Stacked hay bales at the farm barn", caption: "Hay Bales Storage", category: "feeds" as const },
+  { src: galleryFeeds6, alt: "Fresh lucerne hay bales", caption: "Lucerne Hay Bales", category: "feeds" as const },
+  { src: galleryFeeds7, alt: "Fresh cut lucerne in the field", caption: "Lucerne Harvest", category: "feeds" as const },
+  { src: galleryFeeds8, alt: "Packaged lucerne seeds 1kg", caption: "Lucerne Seeds", category: "feeds" as const },
+  { src: galleryFeeds9, alt: "Stacked premium hay bales", caption: "Premium Hay Stock", category: "feeds" as const },
 ];
 
 const categories: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
   { label: "🐄 Dairy Cows", value: "cows" },
   { label: "🐑 Goats & Sheep", value: "goats" },
+  { label: "🌾 Feeds & Supplies", value: "feeds" },
 ];
 
 const GallerySection = () => {
