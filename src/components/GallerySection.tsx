@@ -17,6 +17,13 @@ import galleryGoat8 from "@/assets/gallery-goat-8.jpg";
 import galleryGoat9 from "@/assets/gallery-goat-9.jpg";
 import galleryGoat10 from "@/assets/gallery-goat-10.jpg";
 import galleryGoat11 from "@/assets/gallery-goat-11.jpg";
+import galleryGoat12 from "@/assets/gallery-goat-12.jpg";
+import galleryGoat13 from "@/assets/gallery-goat-13.jpg";
+import galleryGoat14 from "@/assets/gallery-goat-14.jpg";
+import galleryCow5 from "@/assets/gallery-cow-5.jpg";
+import galleryCow6 from "@/assets/gallery-cow-6.jpg";
+import galleryCow7 from "@/assets/gallery-cow-7.jpg";
+import galleryCow8 from "@/assets/gallery-cow-8.jpg";
 import galleryFeeds1 from "@/assets/gallery-feeds-1.jpg";
 import galleryFeeds2 from "@/assets/gallery-feeds-2.jpg";
 import galleryFeeds3 from "@/assets/gallery-feeds-3.jpg";
@@ -50,6 +57,13 @@ const allPhotos = [
   { src: galleryGoat9, alt: "Mother goat with kids", caption: "Doe & Kids", category: "goats" as const },
   { src: galleryGoat10, alt: "Saanen goat nursing kids in barn", caption: "Saanen Nursing", category: "goats" as const },
   { src: galleryGoat11, alt: "Saanen dairy goat herd", caption: "Saanen Herd", category: "goats" as const },
+  { src: galleryGoat12, alt: "Mother goat with newborn kid in barn", caption: "Goat & Newborn Kid", category: "goats" as const },
+  { src: galleryGoat13, alt: "Boer goat herd outdoors", caption: "Boer Goat Herd", category: "goats" as const },
+  { src: galleryGoat14, alt: "Tagged Boer goats close-up", caption: "Tagged Boer Goats", category: "goats" as const },
+  { src: galleryCow5, alt: "Holstein Friesian cows in milking shed", caption: "Milking Shed", category: "cows" as const },
+  { src: galleryCow6, alt: "Dairy cow herd in farm barn", caption: "Cow Herd in Barn", category: "cows" as const },
+  { src: galleryCow7, alt: "Dairy cows feeding at trough", caption: "Cows at Feeding Trough", category: "cows" as const },
+  { src: galleryCow8, alt: "Dairy cows resting in cubicles", caption: "Cows Resting", category: "cows" as const },
   { src: galleryFeeds1, alt: "Organic fertilizer bags and farm chemicals", caption: "Organic Fertilizer", category: "feeds" as const },
   { src: galleryFeeds2, alt: "AgriFlora certified organic fertilizer bag", caption: "AgriFlora Fertilizer", category: "feeds" as const },
   { src: galleryFeeds3, alt: "Feed pellets being weighed on scale", caption: "Feed Pellets", category: "feeds" as const },
