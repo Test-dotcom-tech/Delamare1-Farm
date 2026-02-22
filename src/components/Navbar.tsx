@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const WHATSAPP_NUMBER = "254755700239";
 const PHONE_DISPLAY = "0755 700 239";
@@ -9,8 +10,9 @@ const whatsappLink = (message: string) =>
 const Navbar = () => (
   <nav className="sticky top-0 z-50 bg-primary shadow-lg">
     <div className="container mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#" className="font-serif text-xl font-bold text-primary-foreground md:text-2xl">
-        🐄 Delamere Farm
+      <a href="#" className="flex items-center gap-2 font-serif text-xl font-bold text-primary-foreground md:text-2xl">
+        <img src={logo} alt="Delamere Farm Logo" className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12" />
+        <span className="hidden sm:inline">Delamere Farm</span>
       </a>
       <div className="hidden items-center gap-6 md:flex">
         <a href="#dairy-cows" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Dairy Cows</a>
