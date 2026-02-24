@@ -103,9 +103,9 @@ const Index = () => {
         </div>
       </section>
 
-      <ReviewsSection />
       <GallerySection />
       <FeedsSection />
+      <ReviewsSection />
       <ContactSection />
       <Footer />
 
