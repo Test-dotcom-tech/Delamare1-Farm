@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LivestockCard from "@/components/LivestockCard";
@@ -12,9 +13,41 @@ import ayrshireCow from "@/assets/ayrshire-cow.jpg";
 import girolandoCow from "@/assets/girolando-cow.jpg";
 import saanenGoat from "@/assets/saanen-goat.jpg";
 
+const SITE_URL = "https://www.delamarefarm.co.ke";
+
 const Index = () => {
+  const localBusinessLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Delamare Farm",
+    image: `${SITE_URL}/favicon.jpeg`,
+    "@id": SITE_URL,
+    url: SITE_URL,
+    telephone: "+254755700239",
+    priceRange: "KSH",
+    address: { "@type": "PostalAddress", addressLocality: "Naivasha", addressCountry: "KE" },
+    areaServed: { "@type": "Country", name: "Kenya" },
+    description:
+      "Delamare Farm Naivasha sells quality dairy cows (Friesian, Ayrshire, Girolando), Saanen dairy goats, and farm feeds with countrywide delivery in Kenya.",
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Delamare Farm — Dairy Cows, Saanen Goats &amp; Farm Feeds in Kenya</title>
+        <meta
+          name="description"
+          content="Buy dairy cows for sale in Kenya, Saanen goats and quality farm feeds from Delamare Farm Naivasha. Countrywide delivery, vaccinated livestock, WhatsApp ordering."
+        />
+        <link rel="canonical" href={`${SITE_URL}/`} />
+        <meta property="og:title" content="Delamare Farm — Dairy Cows, Saanen Goats & Farm Feeds in Kenya" />
+        <meta property="og:description" content="Pedigree dairy cows, Saanen goats and farm supplies delivered countrywide in Kenya." />
+        <meta property="og:url" content={`${SITE_URL}/`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(localBusinessLd)}</script>
+      </Helmet>
+
       <Navbar />
       <HeroSection />
 
@@ -24,49 +57,55 @@ const Index = () => {
           <div className="mb-10 text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">Premium Livestock</p>
             <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-              Dairy Cows for Sale
+              Dairy Cows for Sale in Kenya
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              Quality pedigree calves from high-yielding dams. All livestock fully vaccinated with records available.
+              Pedigree Friesian, Ayrshire and Girolando dairy cows from Delamare Farm Naivasha. Fully vaccinated, full records, countrywide delivery.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <LivestockCard
               image={farmCows}
+              imageAlt="Holstein Friesian dairy calves at Delamare Farm Kenya"
               title="Holstein Friesian Calves"
               subtitle="Pedigree Dairy Calves"
-              description="Quality weaned pedigree calves from good dams (high yielders). Available at various stages."
+              description="Quality weaned pedigree calves from high-yielding dams. Available at every stage from 2 months to in-calf heifer."
               badge="Best Seller"
+              primarySlug="holstein-friesian-calf-2-4-months"
               items={[
-                { label: "2-4 months", price: "KSH 12,000" },
-                { label: "4-5 months", price: "KSH 15,000" },
-                { label: "7-8 months", price: "KSH 25,000" },
-                { label: "Matured", price: "KSH 65,000" },
-                { label: "In-Calf", price: "KSH 85,000" },
-                { label: "Twin Family", price: "KSH 105,000" },
+                { label: "2-4 months", productId: "holstein-2-4m" },
+                { label: "4-5 months", productId: "holstein-4-5m" },
+                { label: "7-8 months", productId: "holstein-7-8m" },
+                { label: "Matured", productId: "holstein-matured" },
+                { label: "In-Calf", productId: "holstein-in-calf" },
+                { label: "Twin Family", productId: "holstein-twin-family" },
               ]}
-              whatsappMessage="Hello! I'm interested in Holstein Friesian dairy calves. Please share details."
+              whatsappMessage="Hello Delamare Farm! I'm interested in Holstein Friesian dairy calves. Please share details."
             />
             <LivestockCard
               image={ayrshireCow}
+              imageAlt="Ayrshire dairy cow high milk yield Delamare Farm Kenya"
               title="Ayrshire Dairy Cow"
               subtitle="2nd Lactation"
-              description="Produces 26-28 litres per day. Fully vaccinated with all records available. Delivery countrywide."
+              description="Produces 26-28 litres per day. Fully vaccinated with all records. Countrywide delivery."
               badge="Hot Deal"
+              primarySlug="ayrshire-dairy-cow-2nd-lactation"
               items={[
-                { label: "Ayrshire (2nd Lactation)", price: "KSH 140,000" },
+                { label: "Ayrshire (2nd Lactation)", productId: "ayrshire-2nd" },
               ]}
-              whatsappMessage="Hello! I'm interested in the Ayrshire dairy cow. Please share details."
+              whatsappMessage="Hello Delamare Farm! I'm interested in the Ayrshire dairy cow. Please share details."
             />
             <LivestockCard
               image={girolandoCow}
+              imageAlt="Girolando tropical dairy cow heat tolerant Kenya"
               title="Girolando Breed"
               subtitle="Tropical Dairy Breed"
-              description="A cross of Gir (India) and Holstein — heat-resistant and disease-tolerant, ideal for tropical climates."
+              description="Gir × Holstein cross — heat-resistant and disease-tolerant, ideal for warm Kenyan counties."
+              primarySlug="girolando-tropical-dairy-cow"
               items={[
-                { label: "Girolando Cow", price: "Call for Price" },
+                { label: "Girolando Cow", productId: "girolando" },
               ]}
-              whatsappMessage="Hello! I'm interested in Girolando dairy cattle. Please share details."
+              whatsappMessage="Hello Delamare Farm! I'm interested in Girolando dairy cattle. Please share details."
             />
           </div>
         </div>
@@ -78,26 +117,28 @@ const Index = () => {
           <div className="mb-10 text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">The Queen of Dairy Goats</p>
             <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-              Saanen Dairy Goats
+              Saanen Dairy Goats — Kenya Price &amp; Delivery
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              The best lactating goat breed, producing 3-4 litres per day. Disease-free, sourced from South Africa.
+              The world's top dairy goat breed producing 3-4 litres per day. Disease-free, sourced from South Africa, raised at Delamare Farm.
             </p>
           </div>
           <div className="mx-auto max-w-lg">
             <LivestockCard
               image={saanenGoat}
+              imageAlt="Saanen dairy goat South African breed high milk yield Kenya"
               title="Saanen Breed Goats"
               subtitle="Source: South Africa"
-              description="Disease-free Saanen goats with competitive pricing. Free delivery offered to our farmers."
+              description="Disease-free Saanen goats with competitive pricing. Free delivery to our farmers."
               badge="3-4L/Day"
+              primarySlug="saanen-dairy-goat-2-weeks-delivery"
               items={[
-                { label: "2 Weeks Delivery", price: "KSH 18,000" },
-                { label: "1 Month Delivery", price: "KSH 16,000" },
-                { label: "First Timer", price: "KSH 14,000" },
-                { label: "Second Timer", price: "KSH 13,500" },
+                { label: "2 Weeks Delivery", productId: "saanen-2w" },
+                { label: "1 Month Delivery", productId: "saanen-1m" },
+                { label: "First Timer", productId: "saanen-first-timer" },
+                { label: "Second Timer", productId: "saanen-second-timer" },
               ]}
-              whatsappMessage="Hello! I'm interested in Saanen dairy goats. Please share details."
+              whatsappMessage="Hello Delamare Farm! I'm interested in Saanen dairy goats. Please share details."
             />
           </div>
         </div>
@@ -111,7 +152,7 @@ const Index = () => {
 
       {/* Floating WhatsApp button */}
       <a
-        href={`https://wa.me/254755700239?text=${encodeURIComponent("Hello Delamere Farm!")}`}
+        href={`https://wa.me/254755700239?text=${encodeURIComponent("Hello Delamare Farm!")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-highlight shadow-lg transition hover:scale-110"
