@@ -51,11 +51,11 @@ import galleryFeeds15 from "@/assets/gallery-feeds-15.jpg";
 type Category = "all" | "cows" | "goats" | "feeds";
 
 const allPhotos = [
-  { src: galleryCow1, alt: "Ayrshire dairy cow at Delamere Farm", caption: "Ayrshire Dairy Cow", category: "cows" as const },
+  { src: galleryCow1, alt: "Ayrshire dairy cow at Delamare Farm", caption: "Ayrshire Dairy Cow", category: "cows" as const },
   { src: galleryCow2, alt: "Dairy cow rear view showing healthy build", caption: "Healthy Dairy Cow", category: "cows" as const },
   { src: galleryCow3, alt: "Farm manager with dairy cow", caption: "Quality Livestock Inspection", category: "cows" as const },
   { src: galleryCow4, alt: "Dairy cow being inspected at the farm", caption: "Veterinary Check-up", category: "cows" as const },
-  { src: galleryGoat1, alt: "Dorper sheep in pen at Delamere Farm", caption: "Dorper Sheep Flock", category: "goats" as const },
+  { src: galleryGoat1, alt: "Dorper sheep in pen at Delamare Farm", caption: "Dorper Sheep Flock", category: "goats" as const },
   { src: galleryGoat2, alt: "Sheep and lambs in the barn", caption: "Ewes & Lambs", category: "goats" as const },
   { src: galleryGoat3, alt: "Dorper goats in their pen", caption: "Dorper Goats", category: "goats" as const },
   { src: galleryGoat4, alt: "Sheep flock feeding in the barn", caption: "Flock Feeding Time", category: "goats" as const },
@@ -126,7 +126,7 @@ const GallerySection = () => {
         <div className="mb-10 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Farm Gallery</p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Life at Delamere Farm
+            Life at Delamare Farm
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
             Take a closer look at our livestock, facilities, and the care we put into every animal.

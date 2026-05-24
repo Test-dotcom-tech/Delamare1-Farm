@@ -5,13 +5,13 @@ import { whatsappLink } from "./Navbar";
 const HeroSection = () => (
   <section className="relative overflow-hidden">
     <div className="absolute inset-0">
-      <img src={heroFarm} alt="Delamere Farm dairy cows grazing" className="h-full w-full object-cover" />
+      <img src={heroFarm} alt="Delamare Farm dairy cows grazing" className="h-full w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-primary/30" />
     </div>
     <div className="container relative mx-auto px-4 py-20 md:py-32">
       <div className="max-w-2xl animate-fade-in-up">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-highlight">
-          Delamere Farm Naivasha, Kenya
+          Delamare Farm Naivasha, Kenya
         </p>
         <h1 className="mb-4 font-serif text-3xl font-black leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
           Quality Dairy Cows &amp; Goats at Affordable Prices
@@ -21,7 +21,7 @@ const HeroSection = () => (
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href={whatsappLink("Hello Delamere Farm! I'm interested in purchasing dairy livestock.")}
+            href={whatsappLink("Hello Delamare Farm! I'm interested in purchasing dairy livestock.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-base font-bold text-cta-foreground shadow-lg transition hover:shadow-xl hover:brightness-110"

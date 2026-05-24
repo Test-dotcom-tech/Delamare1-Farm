@@ -27,7 +27,7 @@ const ContactSection = () => (
           </div>
         </a>
         <a
-          href={whatsappLink("Hello Delamere Farm! I'd like to make an inquiry.")}
+          href={whatsappLink("Hello Delamare Farm! I'd like to make an inquiry.")}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-primary-foreground transition hover:bg-primary-foreground/15"
