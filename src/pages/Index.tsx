@@ -5,6 +5,7 @@ import LivestockCard from "@/components/LivestockCard";
 import ReviewsSection from "@/components/ReviewsSection";
 import GallerySection from "@/components/GallerySection";
 import FeedsSection from "@/components/FeedsSection";
+import SheepSection from "@/components/SheepSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -143,6 +144,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <SheepSection />
 
       <GallerySection />
       <FeedsSection />
