@@ -28,7 +28,11 @@ import galleryFeeds9 from "@/assets/gallery-feeds-9.jpg";
 import galleryFeeds10 from "@/assets/gallery-feeds-10.jpg";
 import galleryFeeds15 from "@/assets/gallery-feeds-15.jpg";
 
-export type ProductCategory = "cows" | "goats" | "feeds";
+import sheep1 from "@/assets/sheep-1.jpeg";
+import sheep2 from "@/assets/sheep-2.jpeg";
+import sheep3 from "@/assets/sheep-3.jpeg";
+
+export type ProductCategory = "cows" | "goats" | "sheep" | "feeds";
 
 export interface FAQ {
   q: string;
@@ -384,6 +388,74 @@ export const products: Product[] = [
       "Settled, easy-to-milk temperament",
       "Vaccinated, dewormed, hoof-trimmed",
       "Free delivery included",
+    ],
+    faqs: livestockFaqs,
+  },
+  // ===== SHEEP =====
+  {
+    id: "hampshire-lamb",
+    slug: "hampshire-down-lamb",
+    name: "Hampshire Down Lamb",
+    category: "sheep",
+    breed: "Hampshire Down",
+    age: "Lamb",
+    price: 6000,
+    stock: "Limited Stock",
+    location: commonLocation,
+    images: [sheep1, sheep2, sheep3],
+    shortDescription: "Healthy Hampshire Down lambs — fast growth and excellent meat quality.",
+    longDescription:
+      "Premium Hampshire Down lambs raised at Delamare Farm Naivasha. Known for rapid weight gain, excellent meat conformation, and strong adaptability to Kenyan climates. Each lamb is dewormed, vaccinated, and ready for relocation. Ideal for farmers building a meat flock or upgrading existing stock with superior genetics.",
+    benefits: [
+      "Fast growth and superior meat quality",
+      "Dewormed and vaccinated",
+      "Strong adaptability across Kenya",
+      "Free countrywide delivery",
+    ],
+    faqs: livestockFaqs,
+  },
+  {
+    id: "hampshire-ram",
+    slug: "hampshire-down-breeding-ram",
+    name: "Hampshire Down Breeding Ram",
+    category: "sheep",
+    breed: "Hampshire Down",
+    age: "Mature — ready to serve",
+    price: 11000,
+    stock: "Limited Stock",
+    location: commonLocation,
+    images: [sheep2, sheep3, sheep1],
+    shortDescription: "Mature, proven Hampshire breeding rams ready to serve your flock.",
+    longDescription:
+      "Upgrade your flock with proven Hampshire Down breeding rams from Delamare Farm. Selected for strong frame, libido, and superior meat genetics. Each ram is health-checked, vaccinated, and ready to serve, delivering fast-growing lambs and improved meat conformation across your entire flock.",
+    benefits: [
+      "Ready-to-serve mature rams",
+      "Selected for superior meat genetics",
+      "Health-checked and vaccinated",
+      "Free countrywide delivery",
+    ],
+    faqs: livestockFaqs,
+  },
+  {
+    id: "hampshire-ewe",
+    slug: "hampshire-down-ewe",
+    name: "Pregnant & Lactating Hampshire Ewe",
+    category: "sheep",
+    breed: "Hampshire Down",
+    age: "Mature ewe",
+    price: 16000,
+    priceLabel: "from",
+    stock: "Limited Stock",
+    location: commonLocation,
+    images: [sheep3, sheep1, sheep2],
+    shortDescription: "Pregnant and lactating Hampshire ewes — KSH 16,000 to 40,000.",
+    longDescription:
+      "Productive Hampshire Down ewes — pregnant or lactating — priced between KSH 16,000 and KSH 40,000 depending on age, stage, and lamb count. Perfect for farmers wanting immediate returns on a meat flock with proven mothering ability and milk supply for lambs.",
+    benefits: [
+      "Pregnant or lactating — immediate flock returns",
+      "Proven mothering and milk supply",
+      "Health-checked and vaccinated",
+      "Free countrywide delivery",
     ],
     faqs: livestockFaqs,
   },
