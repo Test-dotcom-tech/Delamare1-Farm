@@ -147,6 +147,7 @@ const Index = () => {
       </section>
 
       <SheepSection />
+      <MaizeSection />
 
       <GallerySection />
       <FeedsSection />
