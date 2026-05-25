@@ -32,6 +32,15 @@ import sheep1 from "@/assets/sheep-1.jpeg";
 import sheep2 from "@/assets/sheep-2.jpeg";
 import sheep3 from "@/assets/sheep-3.jpeg";
 
+import maize1 from "@/assets/maize-1.jpeg";
+import maize2 from "@/assets/maize-2.jpeg";
+import maize3 from "@/assets/maize-3.jpeg";
+import maize4 from "@/assets/maize-4.jpeg";
+import maize5 from "@/assets/maize-5.jpeg";
+import maize6 from "@/assets/maize-6.jpeg";
+import maize7 from "@/assets/maize-7.jpeg";
+import maize8 from "@/assets/maize-8.jpeg";
+
 export type ProductCategory = "cows" | "goats" | "sheep" | "feeds";
 
 export interface FAQ {
@@ -690,6 +699,24 @@ function feedProducts(): Product[] {
         "Boosts forage and crop yield",
         "Restores soil biology",
         "Volume pricing on WhatsApp",
+      ],
+    },
+    {
+      id: "dry-maize",
+      slug: "dry-maize-90kg-bag",
+      name: "Dry Maize (90kg Bag)",
+      price: 3500,
+      priceLabel: "per 90kg bag",
+      img: maize1,
+      images: [maize1, maize2, maize3, maize4, maize5, maize6, maize7, maize8],
+      short: "Clean, dry maize — KSH 3,500 per 90kg bag. Free from dust, delivery on agreement.",
+      long: "Premium dry maize from Delamare Farm Naivasha. Sun-dried to ideal moisture, machine-cleaned, and completely free from dust and foreign matter. Sold in standard 90kg bags at KSH 3,500. Ideal for milling, animal feed formulation, or resale. Delivery is arranged on agreement with the client to any destination countrywide. Call or WhatsApp 0755-700-239 to confirm stock and arrange logistics.",
+      benefits: [
+        "Clean, dust-free dry maize",
+        "Standard 90kg bag",
+        "Sun-dried to ideal moisture",
+        "Delivery on agreement countrywide",
+        "Bulk pricing available",
       ],
     },
   ];
