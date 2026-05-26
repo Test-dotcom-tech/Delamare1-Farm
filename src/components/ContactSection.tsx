@@ -1,5 +1,7 @@
-import { Phone, MessageCircle, MapPin, Clock } from "lucide-react";
-import { whatsappLink, PHONE_DISPLAY, WHATSAPP_NUMBER } from "./Navbar";
+import { Mail, MessageCircle, Clock } from "lucide-react";
+import { whatsappLink, PHONE_DISPLAY } from "./Navbar";
+
+export const FARM_EMAIL = "delamare@delamarefarm.co.ke";
 
 const ContactSection = () => (
   <section id="contact" className="bg-primary py-16 md:py-24">
@@ -13,19 +15,7 @@ const ContactSection = () => (
           Contact Manager Ibrahim Kassim today. We deliver countrywide within 24 hours of placing your order.
         </p>
       </div>
-      <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
-        <a
-          href={`tel:+${WHATSAPP_NUMBER}`}
-          className="flex items-center gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-primary-foreground transition hover:bg-primary-foreground/15"
-        >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cta">
-            <Phone className="h-6 w-6 text-cta-foreground" />
-          </div>
-          <div>
-            <p className="text-sm text-primary-foreground/70">Call Us</p>
-            <p className="text-lg font-bold">{PHONE_DISPLAY}</p>
-          </div>
-        </a>
+      <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-3">
         <a
           href={whatsappLink("Hello Delamare Farm! I'd like to make an inquiry.")}
           target="_blank"
@@ -40,15 +30,18 @@ const ContactSection = () => (
             <p className="text-lg font-bold">{PHONE_DISPLAY}</p>
           </div>
         </a>
-        <div className="flex items-center gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-primary-foreground">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary">
-            <MapPin className="h-6 w-6 text-secondary-foreground" />
+        <a
+          href={`mailto:${FARM_EMAIL}`}
+          className="flex items-center gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-primary-foreground transition hover:bg-primary-foreground/15"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cta">
+            <Mail className="h-6 w-6 text-cta-foreground" />
           </div>
-          <div>
-            <p className="text-sm text-primary-foreground/70">Location</p>
-            <p className="text-lg font-bold">Naivasha, Kenya</p>
+          <div className="min-w-0">
+            <p className="text-sm text-primary-foreground/70">Email</p>
+            <p className="truncate text-base font-bold">{FARM_EMAIL}</p>
           </div>
-        </div>
+        </a>
         <div className="flex items-center gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-6 text-primary-foreground">
           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary">
             <Clock className="h-6 w-6 text-secondary-foreground" />
@@ -57,16 +50,6 @@ const ContactSection = () => (
             <p className="text-sm text-primary-foreground/70">Delivery</p>
             <p className="text-lg font-bold">Countrywide in 24hrs</p>
           </div>
-        </div>
-      </div>
-      {/* Quick order menu */}
-      <div className="mx-auto mt-12 max-w-2xl rounded-xl border border-primary-foreground/20 bg-primary-foreground/5 p-6 text-center text-primary-foreground">
-        <h3 className="font-serif text-lg font-bold">Quick Order Guide</h3>
-        <div className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-          <p>1️⃣ Reply with 1 — For order placement</p>
-          <p>2️⃣ Reply with 2 — For returns, refund & order tracking</p>
-          <p>3️⃣ Reply with 3 — To speak to a representative</p>
-          <p>4️⃣ Reply with 4 — To book a farm visit (KSH 10,000 redeemable on purchase)</p>
         </div>
       </div>
     </div>
