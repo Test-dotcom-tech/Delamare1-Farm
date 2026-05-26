@@ -41,6 +41,15 @@ import maize6 from "@/assets/maize-6.jpeg";
 import maize7 from "@/assets/maize-7.jpeg";
 import maize8 from "@/assets/maize-8.jpeg";
 
+import tomato1 from "@/assets/tomato-1.jpeg";
+import tomato2 from "@/assets/tomato-2.jpeg";
+import tomato3 from "@/assets/tomato-3.jpeg";
+import tomato4 from "@/assets/tomato-4.jpeg";
+import tomato5 from "@/assets/tomato-5.jpeg";
+import tomato6 from "@/assets/tomato-6.jpeg";
+import tomato7 from "@/assets/tomato-7.jpeg";
+import tomato8 from "@/assets/tomato-8.jpeg";
+
 export type ProductCategory = "cows" | "goats" | "sheep" | "feeds";
 
 export interface FAQ {
@@ -717,6 +726,24 @@ function feedProducts(): Product[] {
         "Sun-dried to ideal moisture",
         "Delivery on agreement countrywide",
         "Bulk pricing available",
+      ],
+    },
+    {
+      id: "fresh-tomatoes",
+      slug: "fresh-farm-tomatoes",
+      name: "Fresh Farm Tomatoes",
+      price: 0,
+      priceLabel: "Call for best price",
+      img: tomato1,
+      images: [tomato1, tomato2, tomato3, tomato4, tomato5, tomato6, tomato7, tomato8],
+      short: "Freshly harvested farm tomatoes — bulk crates and baskets available. Wholesale & retail.",
+      long: "Freshly harvested, hand-graded tomatoes from Delamare Farm Naivasha. Grown in greenhouse and open-field plots, picked at peak ripeness and packed in crates, baskets, or cartons to suit your order size. Ideal for wholesalers, market vendors, supermarkets, hotels, and households. Pricing depends on quantity and destination — call or WhatsApp 0755-700-239 for the day's best rate and to arrange countrywide delivery.",
+      benefits: [
+        "Freshly harvested, hand-graded",
+        "Greenhouse & open-field grown",
+        "Wholesale crates or retail baskets",
+        "Daily fresh stock",
+        "Countrywide delivery on agreement",
       ],
     },
   ];
