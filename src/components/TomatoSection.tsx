@@ -134,10 +134,10 @@ const TomatoSection = () => {
             <div className="mt-5 flex items-center justify-between gap-2 rounded-md bg-muted px-4 py-3">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Pricing
+                  Price per crate
                 </p>
                 <p className="font-serif text-2xl font-bold text-primary">
-                  {p.price > 0 ? formatKES(p.price) : p.priceLabel}
+                  {formatKES(p.price)}
                 </p>
               </div>
               <button
@@ -151,9 +151,27 @@ const TomatoSection = () => {
               </button>
             </div>
 
+            <div className="mt-5 rounded-md border border-border bg-background/60 p-4 text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground">📈 Reliable Wholesale Supply</p>
+              <p className="mt-1">5 acres yield <strong className="text-foreground">300 crates weekly for 6 weeks</strong> — perfect for vendors, supermarkets &amp; hotels.</p>
+            </div>
+
+            <div className="mt-3 rounded-md border border-accent/40 bg-accent/10 p-4 text-sm">
+              <p className="font-semibold text-foreground">🌍 Get Your Own Farm Land</p>
+              <p className="mt-1 text-muted-foreground">
+                <strong className="text-foreground">10 Acres for sale</strong> at Delamere Farm Naivasha · <strong className="text-foreground">KSH 400,000 per acre</strong>
+              </p>
+              <ul className="mt-2 space-y-0.5 text-xs text-muted-foreground">
+                <li>✔️ Title Ready &amp; Available</li>
+                <li>✔️ Water Available</li>
+                <li>✔️ Accessible</li>
+                <li>✔️ Within Human Settlements</li>
+              </ul>
+            </div>
+
             <a
               href={whatsappLink(
-                "Hello Delamare Farm! I'd like to order fresh tomatoes. Please share today's price and delivery options."
+                "Hello Delamare Farm! I'd like to order fresh tomatoes (crate @ KSH 6,600). Please confirm stock and delivery."
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -163,8 +181,20 @@ const TomatoSection = () => {
               Order on WhatsApp
             </a>
 
+            <a
+              href={whatsappLink(
+                "Hello Delamare Farm! I'm interested in the 10 acres for sale at KSH 400,000 per acre. Please share more details."
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-transparent px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Inquire About Land
+            </a>
+
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm, Naivasha · 🚚 Delivery on Agreement · ☎️ 0755 700 239
+              📍 Delamere Farm, Naivasha · 🔺 Helpline: 0755 700 239
             </p>
           </div>
         </div>
