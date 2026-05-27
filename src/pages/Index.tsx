@@ -8,6 +8,7 @@ import FeedsSection from "@/components/FeedsSection";
 import SheepSection from "@/components/SheepSection";
 import MaizeSection from "@/components/MaizeSection";
 import TomatoSection from "@/components/TomatoSection";
+import BirdsSection from "@/components/BirdsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -150,6 +151,7 @@ const Index = () => {
       <SheepSection />
       <MaizeSection />
       <TomatoSection />
+      <BirdsSection />
 
 
       <GallerySection />
