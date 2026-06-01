@@ -50,6 +50,15 @@ import tomato6 from "@/assets/tomato-6.jpeg";
 import tomato7 from "@/assets/tomato-7.jpeg";
 import tomato8 from "@/assets/tomato-8.jpeg";
 
+import egg1 from "@/assets/egg-1.jpeg";
+import egg2 from "@/assets/egg-2.jpeg";
+import egg3 from "@/assets/egg-3.jpeg";
+import egg4 from "@/assets/egg-4.jpeg";
+import egg5 from "@/assets/egg-5.jpeg";
+import egg6 from "@/assets/egg-6.jpeg";
+import egg7 from "@/assets/egg-7.jpeg";
+import egg8 from "@/assets/egg-8.jpeg";
+
 export type ProductCategory = "cows" | "goats" | "sheep" | "feeds";
 
 export interface FAQ {
@@ -745,6 +754,25 @@ function feedProducts(): Product[] {
         "Land for sale: 10 acres @ KSH 400,000/acre",
         "Title ready, water available, accessible",
         "Countrywide delivery on agreement",
+      ],
+    },
+    {
+      id: "eggs-wholesale",
+      slug: "eggs-wholesale-tray",
+      name: "Fresh Eggs (Wholesale Trays)",
+      price: 300,
+      priceLabel: "per tray (Big Size)",
+      img: egg1,
+      images: [egg1, egg2, egg3, egg4, egg5, egg6, egg7, egg8],
+      short: "Wholesale eggs — Big 300/=, Small 280/=, Kienyeji 400/= per tray. Empty trays available.",
+      long: "Fresh eggs from Delamare Farm Naivasha at wholesale prices. Big size at KSH 300 per tray, Small size at KSH 280 per tray, and Kienyeji eggs at KSH 400 per tray. We also supply empty paper trays at KSH 10 and empty plastic trays at KSH 30. Call or WhatsApp 0755-700-239 to place your order. Countrywide delivery on agreement.",
+      benefits: [
+        "Big Size eggs — KSH 300 per tray",
+        "Small Size eggs — KSH 280 per tray",
+        "Kienyeji eggs — KSH 400 per tray",
+        "Empty paper trays — KSH 10",
+        "Empty plastic trays — KSH 30",
+        "Wholesale supply, countrywide delivery",
       ],
     },
   ];
