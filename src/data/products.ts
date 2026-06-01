@@ -59,6 +59,11 @@ import egg6 from "@/assets/egg-6.jpeg";
 import egg7 from "@/assets/egg-7.jpeg";
 import egg8 from "@/assets/egg-8.jpeg";
 
+import potato1 from "@/assets/potato-1.jpeg";
+import potato2 from "@/assets/potato-2.jpeg";
+import potato3 from "@/assets/potato-3.jpeg";
+import potato4 from "@/assets/potato-4.jpeg";
+
 export type ProductCategory = "cows" | "goats" | "sheep" | "feeds";
 
 export interface FAQ {
@@ -773,6 +778,24 @@ function feedProducts(): Product[] {
         "Empty paper trays — KSH 10",
         "Empty plastic trays — KSH 30",
         "Wholesale supply, countrywide delivery",
+      ],
+    },
+    {
+      id: "potato-seeds",
+      slug: "potato-seeds-c1-c2",
+      name: "Potato Seeds (Ready for Planting)",
+      price: 3700,
+      priceLabel: "per 90kg C1 bag",
+      img: potato1,
+      images: [potato1, potato2, potato3, potato4],
+      short: "Certified potato seeds — Shangi C1/C2, Sherekea, Markies, Dutch & more. KSH 3,700 / 90kg.",
+      long: "Certified potato seeds from Delamare Farm Naivasha — ready for planting. All popular varieties available including Super Shangi C1 and C2, Stephen, Eunica, Sherekea, Dutch, Markies and more. Pricing: 90kg C1 at KSH 3,700, 50kg C1 at KSH 2,800. Healthy, well-sprouted tubers with strong eyes for excellent germination and high yield potential. Call or WhatsApp 0755-700-239 to order today and we will arrange delivery countrywide on agreement.",
+      benefits: [
+        "90kg C1 — KSH 3,700",
+        "50kg C1 — KSH 2,800",
+        "Varieties: Super Shangi C1/C2, Stephen, Eunica, Sherekea, Dutch, Markies",
+        "Well-sprouted, ready for planting",
+        "Countrywide delivery on agreement",
       ],
     },
   ];
