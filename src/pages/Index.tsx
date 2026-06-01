@@ -6,8 +6,10 @@ import ReviewsSection from "@/components/ReviewsSection";
 import GallerySection from "@/components/GallerySection";
 import FeedsSection from "@/components/FeedsSection";
 import SheepSection from "@/components/SheepSection";
+import DorperSheepSection from "@/components/DorperSheepSection";
 import MaizeSection from "@/components/MaizeSection";
 import TomatoSection from "@/components/TomatoSection";
+import PotatoSection from "@/components/PotatoSection";
 import BirdsSection from "@/components/BirdsSection";
 import EggsSection from "@/components/EggsSection";
 import ContactSection from "@/components/ContactSection";
@@ -150,10 +152,13 @@ const Index = () => {
       </section>
 
       <SheepSection />
+      <DorperSheepSection />
       <MaizeSection />
       <TomatoSection />
+      <PotatoSection />
       <BirdsSection />
       <EggsSection />
+
 
 
       <GallerySection />
