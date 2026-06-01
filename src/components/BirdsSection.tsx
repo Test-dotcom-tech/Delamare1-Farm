@@ -13,10 +13,12 @@ import bird7 from "@/assets/bird-7.jpeg";
 import bird8 from "@/assets/bird-8.jpeg";
 import bird9 from "@/assets/bird-9.jpeg";
 import bird10 from "@/assets/bird-10.jpeg";
+import bird11 from "@/assets/bird-11.jpeg";
+import bird12 from "@/assets/bird-12.jpeg";
 
 const AUTO_MS = 4000;
 
-const images = [bird1, bird2, bird3, bird4, bird5, bird6, bird7, bird8, bird9, bird10];
+const images = [bird1, bird2, bird3, bird4, bird5, bird6, bird7, bird8, bird9, bird10, bird11, bird12];
 
 const KES = (n: number) =>
   new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(n);
