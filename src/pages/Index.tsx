@@ -152,10 +152,13 @@ const Index = () => {
       </section>
 
       <SheepSection />
+      <DorperSheepSection />
       <MaizeSection />
       <TomatoSection />
+      <PotatoSection />
       <BirdsSection />
       <EggsSection />
+
 
 
       <GallerySection />
