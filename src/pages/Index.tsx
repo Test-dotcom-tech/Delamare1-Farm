@@ -13,6 +13,7 @@ import PotatoSection from "@/components/PotatoSection";
 import BirdsSection from "@/components/BirdsSection";
 import GuineaFowlSection from "@/components/GuineaFowlSection";
 import QuailSection from "@/components/QuailSection";
+import NapierSection from "@/components/NapierSection";
 import EggsSection from "@/components/EggsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -161,6 +162,7 @@ const Index = () => {
       <BirdsSection />
       <GuineaFowlSection />
       <QuailSection />
+      <NapierSection />
       <EggsSection />
 
 

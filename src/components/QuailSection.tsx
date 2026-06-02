@@ -10,9 +10,11 @@ import q4 from "@/assets/quail-4.jpeg";
 import q5 from "@/assets/quail-5.jpeg";
 import q6 from "@/assets/quail-6.jpeg";
 import q7 from "@/assets/quail-7.jpeg";
+import q8 from "@/assets/quail-8.jpeg";
+import q9 from "@/assets/quail-9.jpeg";
 
 const AUTO_MS = 4000;
-const images = [q4, q5, q2, q3, q6, q7, q1];
+const images = [q8, q9, q4, q5, q2, q3, q6, q7, q1];
 
 const KES = (n: number) =>
   new Intl.NumberFormat("en-KE", { style: "currency", currency: "KES", maximumFractionDigits: 0 }).format(n);
