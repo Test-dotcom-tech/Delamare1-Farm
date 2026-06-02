@@ -162,6 +162,7 @@ const Index = () => {
       <BirdsSection />
       <GuineaFowlSection />
       <QuailSection />
+      <NapierSection />
       <EggsSection />
 
 
