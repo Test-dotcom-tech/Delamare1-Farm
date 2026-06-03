@@ -15,6 +15,7 @@ import GuineaFowlSection from "@/components/GuineaFowlSection";
 import QuailSection from "@/components/QuailSection";
 import NapierSection from "@/components/NapierSection";
 import EggsSection from "@/components/EggsSection";
+import CowMatSection from "@/components/CowMatSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
