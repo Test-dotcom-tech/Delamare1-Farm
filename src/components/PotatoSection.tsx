@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, MessageCircle, Phone } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, Phone, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getProductBySlug } from "@/data/products";
 import { whatsappLink } from "./Navbar";
+import potatoPoster from "@/assets/potato-poster.jpeg";
 
 const AUTO_MS = 4000;
 
@@ -93,13 +94,12 @@ const PriceRow = ({ label, price, note }: { label: string; price: string; note?:
 );
 
 const VARIETIES = [
-  "Super Shangi C1",
-  "Super Shangi C2",
-  "Stephen",
+  "Shangi",
   "Eunica",
-  "Sherekea",
-  "Dutch",
-  "Markies",
+  "Markis",
+  "Nyayo",
+  "Napoleon",
+  "Manitou",
 ];
 
 const PotatoSection = () => {
@@ -111,21 +111,21 @@ const PotatoSection = () => {
       <div className="container mx-auto px-4">
         <div className="mb-10 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-            🥔 Certified Seed
+            🥔 Wakulima! Wakulima!
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Potato Seeds — Ready for Planting
+            Potato Seeds &amp; Table Potatoes — Delamere Farm
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            All popular varieties available — Super Shangi C1 &amp; C2, Stephen, Eunica, Sherekea, Dutch, Markies and more. Order today and plant a winning crop.
+            Tuko na Shangi, Eunica, Markis, Nyayo, Napoleon &amp; Manitou — quality seeds, high yields, 100% Bora na Uhakika.
           </p>
         </div>
 
         <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-border bg-card shadow-md transition hover:shadow-xl">
-          <Slideshow images={p.images} alt="Certified potato seeds at Delamare Farm Naivasha" />
+          <Slideshow images={[potatoPoster, ...p.images]} alt="Delamere Farm potato seeds & table potatoes — Shangi, Eunica, Markis, Nyayo, Napoleon, Manitou" />
           <div className="p-6 md:p-8">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Potato Seeds · Certified
+              Mbegu &amp; Viazi vya Chakula
             </p>
             <Link
               to={`/product/${p.slug}`}
@@ -137,10 +137,32 @@ const PotatoSection = () => {
               {p.shortDescription}
             </p>
 
-            <div className="mt-5 grid gap-2.5">
-              <PriceRow label="90kg C1 Bag" price="KSH 3,700" note="ready for planting" />
-              <PriceRow label="50kg C1 Bag" price="KSH 2,800" note="ready for planting" />
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-lg border border-border bg-muted/40 p-4">
+                <p className="mb-3 text-xs font-bold uppercase tracking-wider text-primary">
+                  Mbegu (Seed Potatoes)
+                </p>
+                <div className="grid gap-2.5">
+                  <PriceRow label="90kg Bag" price="KSH 3,700" />
+                  <PriceRow label="50kg Bag" price="KSH 3,000" />
+                </div>
+              </div>
+              <div className="rounded-lg border border-border bg-muted/40 p-4">
+                <p className="mb-3 text-xs font-bold uppercase tracking-wider text-primary">
+                  Viazi vya Chakula (Table)
+                </p>
+                <div className="grid gap-2.5">
+                  <PriceRow label="90kg Bag" price="KSH 3,000" />
+                  <PriceRow label="50kg Bag" price="KSH 2,000" />
+                </div>
+              </div>
             </div>
+
+            <div className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-cta px-4 py-3 text-sm font-bold text-cta-foreground">
+              <Truck className="h-5 w-5" />
+              🔥 FREE DELIVERY COUNTRYWIDE
+            </div>
+
 
             <div className="mt-5">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
