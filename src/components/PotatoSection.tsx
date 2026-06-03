@@ -94,13 +94,12 @@ const PriceRow = ({ label, price, note }: { label: string; price: string; note?:
 );
 
 const VARIETIES = [
-  "Super Shangi C1",
-  "Super Shangi C2",
-  "Stephen",
+  "Shangi",
   "Eunica",
-  "Sherekea",
-  "Dutch",
-  "Markies",
+  "Markis",
+  "Nyayo",
+  "Napoleon",
+  "Manitou",
 ];
 
 const PotatoSection = () => {
