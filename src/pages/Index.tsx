@@ -165,6 +165,7 @@ const Index = () => {
       <QuailSection />
       <NapierSection />
       <EggsSection />
+      <CowMatSection />
 
 
 
