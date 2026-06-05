@@ -124,7 +124,8 @@ const CowMatSection = () => {
             </div>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm, Naivasha · 🚚 Pay on Delivery · Limited Stock — Order Today!
+              📍 Delamere Farm, Naivasha · 🚚 Pay on Delivery · 🔥 Best Deal at KSH 1,999<br />
+              <span className="text-[11px]">Delivery fee applies outside Naivasha.</span>
             </p>
           </div>
         </div>
