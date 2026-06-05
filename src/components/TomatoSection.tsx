@@ -157,15 +157,15 @@ const TomatoSection = () => {
             </div>
 
             <div className="mt-3 rounded-md border border-accent/40 bg-accent/10 p-4 text-sm">
-              <p className="font-semibold text-foreground">🌍 Get Your Own Farm Land</p>
+              <p className="font-semibold text-foreground">🔥 Land Offer: 10 Acres at KSH 400k/Acre — Title Ready</p>
               <p className="mt-1 text-muted-foreground">
                 <strong className="text-foreground">10 Acres for sale</strong> at Delamere Farm Naivasha · <strong className="text-foreground">KSH 400,000 per acre</strong>
               </p>
               <ul className="mt-2 space-y-0.5 text-xs text-muted-foreground">
-                <li>✔️ Title Ready &amp; Available</li>
-                <li>✔️ Water Available</li>
-                <li>✔️ Accessible</li>
-                <li>✔️ Within Human Settlements</li>
+                <li>✔️ Title deed ready</li>
+                <li>✔️ 5km from Naivasha–Mai Mahiu road</li>
+                <li>✔️ Water borehole on site</li>
+                <li>✔️ Accessible, within human settlements</li>
               </ul>
             </div>
 
