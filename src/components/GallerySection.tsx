@@ -161,6 +161,8 @@ const GallerySection = () => {
               <img
                 src={photo.src}
                 alt={photo.alt}
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="bg-card px-3 py-2">
@@ -169,6 +171,16 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          📸 See more photos on{" "}
+          <a href="https://facebook.com/delamarefarm" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline hover:text-accent">
+            Facebook
+          </a>{" "}
+          ·{" "}
+          <a href="https://instagram.com/delamarefarm" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline hover:text-accent">
+            Instagram
+          </a>
+        </p>
       </div>
 
       {/* Lightbox */}

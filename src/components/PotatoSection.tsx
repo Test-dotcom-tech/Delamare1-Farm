@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, MessageCircle, Phone, Truck } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, Phone, Plus, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getProductBySlug } from "@/data/products";
+import { useCart } from "@/context/CartContext";
 import { whatsappLink } from "./Navbar";
+import { toast } from "sonner";
 import potatoPoster from "@/assets/potato-poster.jpeg";
 
 const AUTO_MS = 4000;
@@ -83,13 +85,28 @@ const Slideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   );
 };
 
-const PriceRow = ({ label, price, note }: { label: string; price: string; note?: string }) => (
-  <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
-    <div>
-      <p className="text-sm font-semibold text-card-foreground">{label}</p>
-      {note && <p className="text-xs text-muted-foreground">{note}</p>}
+const PriceRow = ({
+  label,
+  price,
+  onAdd,
+}: {
+  label: string;
+  price: string;
+  onAdd: () => void;
+}) => (
+  <div className="flex items-center justify-between gap-2 rounded-md border border-border bg-muted/40 px-3 py-2.5">
+    <p className="text-sm font-semibold text-card-foreground">{label}</p>
+    <div className="flex items-center gap-2">
+      <p className="font-serif text-sm font-bold text-primary sm:text-base">{price}</p>
+      <button
+        type="button"
+        onClick={onAdd}
+        aria-label={`Add ${label} to cart`}
+        className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground transition hover:brightness-110"
+      >
+        <Plus className="h-4 w-4" />
+      </button>
     </div>
-    <p className="font-serif text-lg font-bold text-primary">{price}</p>
   </div>
 );
 
@@ -102,9 +119,33 @@ const VARIETIES = [
   "Manitou",
 ];
 
+const POTATO_ITEMS = [
+  { id: "potato-seed-90", label: "90kg Bag", price: 4500, group: "seed" as const },
+  { id: "potato-seed-50", label: "50kg Bag", price: 3000, group: "seed" as const },
+  { id: "potato-table-90", label: "90kg Bag", price: 3000, group: "table" as const },
+  { id: "potato-table-50", label: "50kg Bag", price: 2000, group: "table" as const },
+];
+
 const PotatoSection = () => {
   const p = getProductBySlug("potato-seeds-c1-c2");
+  const { addItem } = useCart();
   if (!p) return null;
+
+  const handleAdd = (item: typeof POTATO_ITEMS[number]) => {
+    const name = item.group === "seed"
+      ? `Seed Potato — ${item.label}`
+      : `Table Potato — ${item.label}`;
+    addItem({
+      id: item.id,
+      name,
+      price: item.price,
+      priceLabel: "per bag",
+      image: p.images[0],
+    });
+    toast.success(`${name} added to cart`);
+  };
+
+  const fmt = (n: number) => `KSH ${n.toLocaleString()}`;
 
   return (
     <section id="potato-seeds" className="py-16 md:py-24">
@@ -137,14 +178,19 @@ const PotatoSection = () => {
               {p.shortDescription}
             </p>
 
+            <div className="mt-3 rounded-md border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs font-semibold text-destructive">
+              ⚠️ Not KEPHIS certified — ask for germination guarantee.
+            </div>
+
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <div className="rounded-lg border border-border bg-muted/40 p-4">
                 <p className="mb-3 text-xs font-bold uppercase tracking-wider text-primary">
                   Mbegu (Seed Potatoes)
                 </p>
                 <div className="grid gap-2.5">
-                  <PriceRow label="90kg Bag" price="KSH 3,700" />
-                  <PriceRow label="50kg Bag" price="KSH 3,000" />
+                  {POTATO_ITEMS.filter((i) => i.group === "seed").map((i) => (
+                    <PriceRow key={i.id} label={i.label} price={fmt(i.price)} onAdd={() => handleAdd(i)} />
+                  ))}
                 </div>
               </div>
               <div className="rounded-lg border border-border bg-muted/40 p-4">
@@ -152,8 +198,9 @@ const PotatoSection = () => {
                   Viazi vya Chakula (Table)
                 </p>
                 <div className="grid gap-2.5">
-                  <PriceRow label="90kg Bag" price="KSH 3,000" />
-                  <PriceRow label="50kg Bag" price="KSH 2,000" />
+                  {POTATO_ITEMS.filter((i) => i.group === "table").map((i) => (
+                    <PriceRow key={i.id} label={i.label} price={fmt(i.price)} onAdd={() => handleAdd(i)} />
+                  ))}
                 </div>
               </div>
             </div>
@@ -162,6 +209,8 @@ const PotatoSection = () => {
               <Truck className="h-5 w-5" />
               🔥 FREE DELIVERY COUNTRYWIDE
             </div>
+
+
 
 
             <div className="mt-5">
@@ -190,7 +239,7 @@ const PotatoSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cta px-4 py-3 text-sm font-bold text-cta-foreground transition hover:brightness-110"
               >
                 <MessageCircle className="h-4 w-4" />
-                Order on WhatsApp
+                Order Now
               </a>
               <a
                 href="tel:+254755700239"
