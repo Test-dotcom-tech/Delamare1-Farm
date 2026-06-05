@@ -14,7 +14,6 @@ const feedIds = [
   "rice-stalks-hay",
   "corn-silage",
   "sorghum-silage",
-  "super-napier-stems",
   "maize-germ",
   "hygrow-fertilizer",
 ];
