@@ -161,6 +161,8 @@ const GallerySection = () => {
               <img
                 src={photo.src}
                 alt={photo.alt}
+                loading="lazy"
+                decoding="async"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="bg-card px-3 py-2">
