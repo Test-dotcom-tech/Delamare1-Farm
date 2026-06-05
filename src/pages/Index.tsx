@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import SectionNav from "@/components/SectionNav";
+import TrustBadges from "@/components/TrustBadges";
 import LivestockCard from "@/components/LivestockCard";
 import ReviewsSection from "@/components/ReviewsSection";
 import GallerySection from "@/components/GallerySection";
