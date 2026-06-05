@@ -27,7 +27,7 @@ const HeroSection = () => (
             className="inline-flex items-center gap-2 rounded-lg bg-cta px-6 py-3 text-base font-bold text-cta-foreground shadow-lg transition hover:shadow-xl hover:brightness-110"
           >
             <MessageCircle className="h-5 w-5" />
-            Order via WhatsApp
+            Order Now
           </a>
           <a
             href="#dairy-cows"
