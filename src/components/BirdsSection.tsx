@@ -31,7 +31,6 @@ interface BirdItem {
 }
 
 const chickItems: BirdItem[] = [
-  { id: "bird-guinea-keet", name: "Guinea Fowl Keets", price: 150, image: bird3 },
   { id: "bird-goose-chick", name: "Goose Chicks", price: 200, image: bird2 },
   { id: "bird-turkey-chick", name: "Turkey Chicks", price: 250, image: bird5 },
   { id: "bird-silkie-chick", name: "Silkie Chicks", price: 250, image: bird7 },
@@ -39,7 +38,6 @@ const chickItems: BirdItem[] = [
 ];
 
 const matureItems: BirdItem[] = [
-  { id: "bird-guinea-pair", name: "Mature Guinea Fowl Pair", price: 3000, image: bird4 },
   { id: "bird-goose-pair", name: "Mature Goose Pair", price: 4000, image: bird1 },
   { id: "bird-turkey-pair", name: "Mature Turkey Pair", price: 6000, image: bird5 },
 ];
