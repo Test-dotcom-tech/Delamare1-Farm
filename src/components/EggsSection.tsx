@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, MessageCircle, Phone } from "lucide-react";
+import { ChevronLeft, ChevronRight, MessageCircle, Phone, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getProductBySlug } from "@/data/products";
 import { whatsappLink } from "./Navbar";
+import { useCart } from "@/context/CartContext";
+import { toast } from "sonner";
 
 const AUTO_MS = 4000;
 
