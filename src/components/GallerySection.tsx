@@ -171,6 +171,16 @@ const GallerySection = () => {
             </div>
           ))}
         </div>
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          📸 See more photos on{" "}
+          <a href="https://facebook.com/delamarefarm" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline hover:text-accent">
+            Facebook
+          </a>{" "}
+          ·{" "}
+          <a href="https://instagram.com/delamarefarm" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary underline hover:text-accent">
+            Instagram
+          </a>
+        </p>
       </div>
 
       {/* Lightbox */}
