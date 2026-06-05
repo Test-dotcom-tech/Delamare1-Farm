@@ -84,19 +84,59 @@ const Slideshow = ({ images, alt }: { images: string[]; alt: string }) => {
   );
 };
 
-const PriceRow = ({ label, price, note }: { label: string; price: string; note?: string }) => (
+const EGG_ITEMS = [
+  { id: "egg-big", label: "Big Size", note: "per tray", price: 300 },
+  { id: "egg-small", label: "Small Size", note: "per tray", price: 280 },
+  { id: "egg-kienyeji", label: "Kienyeji Eggs", note: "per tray", price: 400 },
+  { id: "egg-paper-tray", label: "Empty Paper Tray", note: "each", price: 10 },
+  { id: "egg-plastic-tray", label: "Empty Plastic Tray", note: "each", price: 30 },
+];
+
+const PriceRow = ({
+  label,
+  price,
+  note,
+  onAdd,
+}: {
+  label: string;
+  price: string;
+  note?: string;
+  onAdd: () => void;
+}) => (
   <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
-    <div>
+    <div className="min-w-0">
       <p className="text-sm font-semibold text-card-foreground">{label}</p>
       {note && <p className="text-xs text-muted-foreground">{note}</p>}
     </div>
-    <p className="font-serif text-lg font-bold text-primary">{price}</p>
+    <div className="flex items-center gap-2">
+      <p className="font-serif text-base font-bold text-primary sm:text-lg">{price}</p>
+      <button
+        type="button"
+        onClick={onAdd}
+        aria-label={`Add ${label} to cart`}
+        className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground transition hover:brightness-110"
+      >
+        <Plus className="h-4 w-4" />
+      </button>
+    </div>
   </div>
 );
 
 const EggsSection = () => {
   const p = getProductBySlug("eggs-wholesale-tray");
+  const { addItem } = useCart();
   if (!p) return null;
+
+  const handleAdd = (item: typeof EGG_ITEMS[number]) => {
+    addItem({
+      id: item.id,
+      name: `Eggs — ${item.label}`,
+      price: item.price,
+      priceLabel: item.note,
+      image: p.images[0],
+    });
+    toast.success(`${item.label} added to cart`);
+  };
 
   return (
     <section id="eggs" className="bg-muted py-16 md:py-24">
@@ -130,12 +170,17 @@ const EggsSection = () => {
             </p>
 
             <div className="mt-5 grid gap-2.5">
-              <PriceRow label="Big Size" price="KSH 300" note="per tray" />
-              <PriceRow label="Small Size" price="KSH 280" note="per tray" />
-              <PriceRow label="Kienyeji Eggs" price="KSH 400" note="per tray" />
-              <PriceRow label="Empty Paper Tray" price="KSH 10" note="each" />
-              <PriceRow label="Empty Plastic Tray" price="KSH 30" note="each" />
+              {EGG_ITEMS.map((it) => (
+                <PriceRow
+                  key={it.id}
+                  label={it.label}
+                  note={it.note}
+                  price={`KSH ${it.price}`}
+                  onAdd={() => handleAdd(it)}
+                />
+              ))}
             </div>
+
 
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               <a
