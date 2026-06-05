@@ -63,6 +63,9 @@ const Index = () => {
 
       <Navbar />
       <HeroSection />
+      <SectionNav />
+      <TrustBadges />
+
 
       {/* Dairy Cows Section */}
       <section id="dairy-cows" className="py-16 md:py-24">
