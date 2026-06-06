@@ -148,7 +148,7 @@ const GuineaFowlSection = () => (
             Laying Guinea Fowls
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Healthy 8-month-old Kanga pairs already laying eggs — perfect for starting or expanding your flock. Countrywide delivery available.
+            Healthy 8-month-old Kanga pairs already laying eggs perfect for starting or expanding your flock. Countrywide delivery available.
           </p>
 
           <div className="mt-5 space-y-2">
@@ -172,7 +172,7 @@ const GuineaFowlSection = () => (
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
               <Phone className="h-4 w-4" />
-              Call 0755 700 239
+              Inquire
             </a>
           </div>
 

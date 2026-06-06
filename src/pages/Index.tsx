@@ -135,7 +135,7 @@ const Index = () => {
           <div className="mb-10 text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">The Queen of Dairy Goats</p>
             <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-              Saanen Dairy Goats — Kenya Price &amp; Delivery
+              Saanen Dairy Goats
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
               The world's top dairy goat breed producing 3-4 litres per day. Disease-free, sourced from South Africa, raised at Delamare Farm.

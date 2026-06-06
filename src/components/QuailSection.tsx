@@ -140,7 +140,7 @@ const QuailSection = () => (
           Quail Birds, Chicks &amp; Eggs for Sale
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-          Healthy quails from Delamare Farm Naivasha — perfect for high-protein eggs and lean meat. Countrywide delivery available.
+          Healthy quails from Delamare Farm Naivasha perfect for high-protein eggs and lean meat. Countrywide delivery available.
         </p>
       </div>
 
@@ -154,7 +154,7 @@ const QuailSection = () => (
             Quail Pricing
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Mature laying quails, day-old chicks and fresh fertile eggs — start or grow your quail flock today.
+            Mature laying quails, day-old chicks and fresh fertile eggs. Start or grow your quail flock today.
           </p>
 
           <div className="mt-5 space-y-2">
@@ -178,7 +178,7 @@ const QuailSection = () => (
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
               <Phone className="h-4 w-4" />
-              Call 0755 700 239
+              Inquire
             </a>
           </div>
 

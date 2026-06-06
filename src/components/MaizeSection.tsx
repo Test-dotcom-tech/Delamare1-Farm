@@ -108,7 +108,7 @@ const MaizeSection = () => {
             🌽 Fresh Stock
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Dry Maize for Sale — 90kg Bags
+            Dry Maize for Sale  90kg Bags
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Clean, sun-dried maize free from dust. Ideal for milling, animal feed, or resale. Delivered to your destination upon agreement.
@@ -164,7 +164,7 @@ const MaizeSection = () => {
             </a>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm, Naivasha · 🚚 Delivery on Agreement · ☎️ 0755 700 239
+              📍 Delamare Farm, Naivasha · 🚚 Delivery on Agreement
             </p>
           </div>
         </div>

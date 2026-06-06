@@ -146,7 +146,7 @@ const EggsSection = () => {
             🥚 Wholesale Prices
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Fresh Eggs — Wholesale Trays
+            Fresh Eggs Wholesale Trays
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Big size, small size, and Kienyeji eggs at wholesale prices. Empty paper and plastic trays also available.
@@ -199,12 +199,12 @@ const EggsSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="h-4 w-4" />
-                Call 0755 700 239
+                Inquire
               </a>
             </div>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamare Farm, Naivasha · 🚚 Countrywide Delivery · ☎️ 0755 700 239
+              📍 Delamare Farm, Naivasha
             </p>
           </div>
         </div>

@@ -141,12 +141,12 @@ const NapierSection = () => (
           Napier Grass Cuttings &amp; Livestock Fodder
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-          Grown, nurtured, graded and packaged at Delamere Farm. High-yield fodder for dairy cows, goats, sheep and rabbits.
+          Grown, nurtured, graded and packaged at Delamare Farm. High-yield fodder for dairy cows, goats, sheep and rabbits.
         </p>
       </div>
 
       <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-border bg-card shadow-md transition hover:shadow-xl">
-        <Slideshow alt="Napier grass cuttings and livestock fodder at Delamere Farm" />
+        <Slideshow alt="Napier grass cuttings and livestock fodder at Delamare Farm" />
         <div className="p-6 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Fodder · Cuttings, Vines &amp; Splits
@@ -187,12 +187,12 @@ const NapierSection = () => (
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
               <Phone className="h-4 w-4" />
-              Call 0755 700 239
+              Inquire
             </a>
           </div>
 
           <p className="mt-4 text-center text-xs text-muted-foreground">
-            📍 Delamere Farm, Naivasha · Kenya
+            📍 Delamare Farm, Naivasha · Kenya
           </p>
         </div>
       </div>

@@ -142,7 +142,7 @@ const GirolandoHeifersSection = () => (
           Girolando Breed Heifers for Sale
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-          Quality Girolando heifers — healthy, well-managed and ideal for warm Kenyan climates. Limited stock — book yours today!
+          Quality Girolando heifers healthy, well-managed and ideal for warm Kenyan climates. Limited stock  book yours today!
         </p>
       </div>
 
@@ -156,7 +156,7 @@ const GirolandoHeifersSection = () => (
             Healthy &amp; Well-Managed Heifers
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Heat-tolerant, disease-resistant Gir × Holstein heifers available at every growth stage — from young heifers to in-calf, ready to deliver.
+            Heat-tolerant, disease-resistant Gir × Holstein heifers available at every growth stage from young heifers to in-calf, ready to deliver.
           </p>
 
           <div className="mt-5 space-y-2">
@@ -180,12 +180,12 @@ const GirolandoHeifersSection = () => (
               className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
               <Phone className="h-4 w-4" />
-              Call 0755 700 239
+              Inquire
             </a>
           </div>
 
           <p className="mt-4 text-center text-xs text-muted-foreground">
-            📍 Delamare Farm, Naivasha · 📞 Call/WhatsApp 0755-700-239
+            📍 Delamare Farm, Naivasha
           </p>
         </div>
       </div>

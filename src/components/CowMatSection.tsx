@@ -37,7 +37,7 @@ const CowMatSection = () => {
             Cow Rubber Floor Mats
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            ✅ Don't let your cows suffer on hard floors. Give them comfort, protection &amp; better health — improves milk yield and reduces vet bills.
+            ✅ Don't let your cows suffer on hard floors. Give them comfort, protection &amp; better health improves milk yield and reduces vet bills.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const CowMatSection = () => {
           <div className="relative h-72 w-full overflow-hidden rounded-t-xl bg-muted sm:h-96 md:h-[28rem]">
             <img
               src={cowMat}
-              alt="Cow Rubber Floor Mat 5ft x 3ft 15mm thick — Delamere Farm Naivasha"
+              alt="Cow Rubber Floor Mat 5ft x 3ft 15mm thick — Delamare Farm Naivasha"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
@@ -105,7 +105,7 @@ const CowMatSection = () => {
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <a
                 href={whatsappLink(
-                  "Hello Delamere Farm! I'd like to order the Cow Rubber Floor Mat (5ft × 3ft, 15mm) @ KSH 1,999. Please confirm delivery."
+                  "Hello Delamare Farm! I'd like to order the Cow Rubber Floor Mat (5ft × 3ft, 15mm) @ KSH 1,999. Please confirm delivery."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,12 +119,12 @@ const CowMatSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="h-4 w-4" />
-                Call 0755 700 239
+                Inquire
               </a>
             </div>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm, Naivasha · 🚚 Pay on Delivery · 🔥 Best Deal at KSH 1,999<br />
+              📍 Delamare Farm, Naivasha · 🚚 Pay on Delivery<br />
               <span className="text-[11px]">Delivery fee applies outside Naivasha.</span>
             </p>
           </div>

@@ -12,7 +12,6 @@ const Footer = () => (
       </p>
       <p className="mt-1">📍 Visit: Delamare Farm, Naivasha (off Nairobi-Nakuru Highway)</p>
       <p className="mt-1">⏰ Farm Visit Hours: Mon–Sat 8am–5pm</p>
-      <p className="mt-1 text-xs">Visit Fee: <strong className="text-foreground">KSH 10,000</strong> (redeemable on purchase) · Manager Ibrahim Kassim</p>
       <p className="mt-4 text-xs">© {new Date().getFullYear()} Delamare Farm Animal Shop. All rights reserved.</p>
     </div>
   </footer>

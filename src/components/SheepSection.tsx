@@ -116,7 +116,7 @@ const SheepSection = () => {
             Premium Hampshire Down Sheep for Sale
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Upgrade your farm with Hampshire sheep — fast growth, excellent meat quality, and strong adaptability. Free countrywide delivery from Delamare Farm Naivasha.
+            Upgrade your farm with Hampshire sheep. Fast growth, excellent meat quality, and strong adaptability. Free countrywide delivery from Delamare Farm Naivasha.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ const SheepSection = () => {
               </Link>
             )}
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Known for fast growth, excellent meat quality, and strong adaptability. Healthy, vaccinated stock ready for delivery countrywide. Serious farmers only — order early while stock lasts.
+              Known for fast growth, excellent meat quality, and strong adaptability. Healthy, vaccinated stock ready for delivery countrywide. Order early while stock lasts.
             </p>
 
             <div className="mt-5 space-y-2">
@@ -177,7 +177,7 @@ const SheepSection = () => {
             </a>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamare Farm, Naivasha · 🚚 Free Delivery Countrywide · 📲 0755 700 239
+              📍 Delamare Farm, Naivasha · 🚚 Free Delivery Countrywide.
             </p>
           </div>
         </div>

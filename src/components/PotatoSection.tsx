@@ -155,15 +155,15 @@ const PotatoSection = () => {
             🥔 Wakulima! Wakulima!
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Potato Seeds &amp; Table Potatoes — Delamere Farm
+            Potato Seeds &amp; Table Potatoes
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Tuko na Shangi, Eunica, Markis, Nyayo, Napoleon &amp; Manitou — quality seeds, high yields, 100% Bora na Uhakika.
+            Tuko na Shangi, Eunica, Markis, Nyayo, Napoleon &amp; Manitou quality seeds, high yields, 100% Bora na Uhakika.
           </p>
         </div>
 
         <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-border bg-card shadow-md transition hover:shadow-xl">
-          <Slideshow images={[potatoPoster, ...p.images]} alt="Delamere Farm potato seeds & table potatoes — Shangi, Eunica, Markis, Nyayo, Napoleon, Manitou" />
+          <Slideshow images={[potatoPoster, ...p.images]} alt="Delamare Farm potato seeds & table potatoes — Shangi, Eunica, Markis, Nyayo, Napoleon, Manitou" />
           <div className="p-6 md:p-8">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Mbegu &amp; Viazi vya Chakula
@@ -179,7 +179,7 @@ const PotatoSection = () => {
             </p>
 
             <div className="mt-3 rounded-md border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs font-semibold text-destructive">
-              ⚠️ Not KEPHIS certified — ask for germination guarantee.
+              ⚠️ KEPHIS certified — ask for germination guarantee.
             </div>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -246,12 +246,12 @@ const PotatoSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="h-4 w-4" />
-                Call 0755 700 239
+                Inquire
               </a>
             </div>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamare Farm, Naivasha · 🚚 Countrywide Delivery · ☎️ 0755 700 239
+              📍 Delamare Farm, Naivasha · 🚚 Countrywide Delivery
             </p>
           </div>
         </div>

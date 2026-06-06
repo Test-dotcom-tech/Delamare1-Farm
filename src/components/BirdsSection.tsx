@@ -149,10 +149,10 @@ const BirdsSection = () => (
           🐓🦆 New Arrivals
         </p>
         <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-          Birds on Sale — Goose, Turkey, Silkie &amp; Brahma
+          Goose, Turkey, Silkie &amp; Brahma
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-          Get your feathered friends today! Healthy &amp; vaccinated chicks and mature pairs from Delamare Farm Naivasha — countrywide delivery available.
+          Get your feathered friends today! Healthy &amp; vaccinated chicks and mature pairs from Delamare Farm Naivasha. Countrywide delivery available.
         </p>
       </div>
 
@@ -166,7 +166,7 @@ const BirdsSection = () => (
             Healthy &amp; Vaccinated 💯
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-            Choose from Goose, Turkey, Silkie and Brahma — vaccinated chicks for rearing, or mature breeding pairs ready to lay. Looking for Kanga? See our dedicated <a href="#guinea-fowls" className="font-semibold text-primary underline hover:text-accent">Guinea Fowl section</a>.
+            Choose from Goose, Turkey, Silkie and Brahma vaccinated chicks for rearing, or mature breeding pairs ready to lay. Looking for Kanga? See our dedicated <a href="#guinea-fowls" className="font-semibold text-primary underline hover:text-accent">Guinea Fowl section</a>.
           </p>
 
           <div className="mt-5">
@@ -200,7 +200,7 @@ const BirdsSection = () => (
           </a>
 
           <p className="mt-4 text-center text-xs text-muted-foreground">
-            📍 Delamare Farm, Naivasha · 📲 BIRDS: 0755 700 239
+            📍 Delamare Farm, Naivasha
           </p>
         </div>
       </div>

@@ -17,7 +17,7 @@ const HeroSection = () => (
           Quality Dairy Cows &amp; Goats at Affordable Prices
         </h1>
         <p className="mb-8 text-lg leading-relaxed text-primary-foreground/90 md:text-xl">
-          Pedigree calves, in-calf heifers, Ayrshire, Girolando, and Saanen dairy goats — delivered countrywide within 24 hours.
+          Pedigree calves, in-calf heifers, Ayrshire, Girolando, and Saanen dairy goats delivered countrywide within 24 hours.
         </p>
         <div className="flex flex-wrap gap-4">
           <a

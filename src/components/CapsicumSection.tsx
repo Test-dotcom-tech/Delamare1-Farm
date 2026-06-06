@@ -29,7 +29,7 @@ const CapsicumSection = () => {
             💚 Farm Fresh Produce
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Fresh Capsicum (Pilipili Hoho) — Farm Gate Price
+            Fresh Capsicum (Pilipili Hoho)
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             Hand-picked green capsicum direct from Delamare Farm Naivasha. Wholesale bags ready for vendors,
@@ -47,7 +47,7 @@ const CapsicumSection = () => {
               className="h-full w-full object-cover"
             />
             <span className="absolute left-3 top-3 rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground shadow">
-              Farm Gate · KSH 1,500
+              Farm Gate price
             </span>
           </div>
 
@@ -59,7 +59,7 @@ const CapsicumSection = () => {
               Green Capsicum (Pilipili Hoho)
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Freshly harvested, well-graded capsicum in standard sacks — ideal for resale and bulk catering.
+              Freshly harvested, well-graded capsicum in standard sacks ideal for resale and bulk catering.
             </p>
 
             <div className="mt-5 flex items-center justify-between gap-2 rounded-md bg-muted px-4 py-3">
@@ -97,7 +97,7 @@ const CapsicumSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="h-4 w-4" />
-                Call 0755 700 239
+                Inquire
               </a>
             </div>
 

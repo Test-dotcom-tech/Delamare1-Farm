@@ -108,10 +108,10 @@ const TomatoSection = () => {
             🍅 Farm Fresh Produce
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Fresh Farm Tomatoes — Wholesale &amp; Retail
+            Fresh Farm Tomatoes Wholesale Price &amp; Retail
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            Hand-picked, hand-graded tomatoes from our greenhouse and open-field plots in Naivasha. Crates, baskets, and cartons available — delivered countrywide on agreement.
+            Hand-picked, hand-graded tomatoes from our greenhouse and open-field plots in Naivasha. Crates, baskets, and cartons available and delivered countrywide on agreement.
           </p>
         </div>
 
@@ -153,17 +153,17 @@ const TomatoSection = () => {
 
             <div className="mt-5 rounded-md border border-border bg-background/60 p-4 text-sm text-muted-foreground">
               <p className="font-semibold text-foreground">📈 Reliable Wholesale Supply</p>
-              <p className="mt-1">5 acres yield <strong className="text-foreground">300 crates weekly for 6 weeks</strong> — perfect for vendors, supermarkets &amp; hotels.</p>
+              <p className="mt-1">5 acres yield <strong className="text-foreground">300 crates weekly for 6 weeks</strong> perfect for vendors, supermarkets &amp; hotels.</p>
             </div>
 
             <div className="mt-3 rounded-md border border-accent/40 bg-accent/10 p-4 text-sm">
-              <p className="font-semibold text-foreground">🔥 Land Offer: 10 Acres at KSH 400k/Acre — Title Ready</p>
+              <p className="font-semibold text-foreground">🔥 Land Offer: 10 Acres at KSH 400k/Acre with Titledeed Ready</p>
               <p className="mt-1 text-muted-foreground">
-                <strong className="text-foreground">10 Acres for sale</strong> at Delamere Farm Naivasha · <strong className="text-foreground">KSH 400,000 per acre</strong>
+                <strong className="text-foreground">10 Acres for sale</strong> at Delamare Farm Naivasha · <strong className="text-foreground">KSH 400,000 per acre</strong>
               </p>
               <ul className="mt-2 space-y-0.5 text-xs text-muted-foreground">
                 <li>✔️ Title deed ready</li>
-                <li>✔️ 5km from Naivasha–Mai Mahiu road</li>
+                <li>✔️ 5km from Naivasha</li>
                 <li>✔️ Water borehole on site</li>
                 <li>✔️ Accessible, within human settlements</li>
               </ul>
@@ -194,7 +194,7 @@ const TomatoSection = () => {
             </a>
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm, Naivasha · 🔺 Helpline: 0755 700 239
+              📍 Delamare Farm, Naivasha 
             </p>
           </div>
         </div>
