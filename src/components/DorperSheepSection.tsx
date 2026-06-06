@@ -1,16 +1,46 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, Plus } from "lucide-react";
+import { toast } from "sonner";
+import { useCart } from "@/context/CartContext";
 import { whatsappLink } from "./Navbar";
 import dorperVideo from "@/assets/dorper-sheep.mp4.asset.json";
+import sheep1 from "@/assets/sheep-1.jpeg";
 
-const PriceRow = ({ label, price, note }: { label: string; price: string; note?: string }) => (
-  <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
-    <div>
-      <p className="text-sm font-semibold text-card-foreground">{label}</p>
-      {note && <p className="text-xs text-muted-foreground">{note}</p>}
+const PriceRow = ({
+  id,
+  label,
+  price,
+  priceValue,
+  note,
+}: {
+  id: string;
+  label: string;
+  price: string;
+  priceValue: number;
+  note?: string;
+}) => {
+  const { addItem } = useCart();
+  const handleAdd = () => {
+    addItem({ id, name: `Dorper Sheep — ${label}`, price: priceValue, image: sheep1 });
+    toast.success(`Dorper Sheep (${label}) added to cart`);
+  };
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
+      <div className="min-w-0 flex-1">
+        <p className="text-sm font-semibold text-card-foreground">{label}</p>
+        {note && <p className="text-xs text-muted-foreground">{note}</p>}
+      </div>
+      <p className="font-serif text-lg font-bold text-primary">{price}</p>
+      <button
+        type="button"
+        onClick={handleAdd}
+        aria-label={`Add Dorper sheep ${label} to cart`}
+        className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground transition hover:brightness-110"
+      >
+        <Plus className="h-4 w-4" />
+      </button>
     </div>
-    <p className="font-serif text-lg font-bold text-primary">{price}</p>
-  </div>
-);
+  );
+};
 
 const DorperSheepSection = () => {
   return (
