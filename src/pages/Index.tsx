@@ -179,7 +179,6 @@ const Index = () => {
       <FeedsSection />
       <GallerySection />
       <ReviewsSection />
-      <ReviewsSection />
       <ContactSection />
       <Footer />
 
