@@ -107,7 +107,7 @@ const LivestockCard = ({
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-lg bg-cta px-4 py-3 text-sm font-bold text-cta-foreground transition hover:brightness-110"
         >
           <MessageCircle className="h-4 w-4" />
-          Inquire on WhatsApp
+          Order Now
         </a>
       </div>
     </div>

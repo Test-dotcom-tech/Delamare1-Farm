@@ -14,6 +14,7 @@ import TomatoSection from "@/components/TomatoSection";
 import PotatoSection from "@/components/PotatoSection";
 import BirdsSection from "@/components/BirdsSection";
 import GuineaFowlSection from "@/components/GuineaFowlSection";
+import GirolandoHeifersSection from "@/components/GirolandoHeifersSection";
 import QuailSection from "@/components/QuailSection";
 import NapierSection from "@/components/NapierSection";
 import EggsSection from "@/components/EggsSection";
@@ -162,6 +163,7 @@ const Index = () => {
 
       <SheepSection />
       <DorperSheepSection />
+      <GirolandoHeifersSection />
       <MaizeSection />
       <TomatoSection />
       <PotatoSection />
@@ -174,8 +176,8 @@ const Index = () => {
 
 
 
-      <GallerySection />
       <FeedsSection />
+      <GallerySection />
       <ReviewsSection />
       <ContactSection />
       <Footer />

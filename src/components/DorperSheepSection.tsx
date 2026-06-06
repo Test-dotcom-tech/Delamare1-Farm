@@ -1,16 +1,46 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, Plus } from "lucide-react";
+import { toast } from "sonner";
+import { useCart } from "@/context/CartContext";
 import { whatsappLink } from "./Navbar";
 import dorperVideo from "@/assets/dorper-sheep.mp4.asset.json";
+import sheep1 from "@/assets/sheep-1.jpeg";
 
-const PriceRow = ({ label, price, note }: { label: string; price: string; note?: string }) => (
-  <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
-    <div>
-      <p className="text-sm font-semibold text-card-foreground">{label}</p>
-      {note && <p className="text-xs text-muted-foreground">{note}</p>}
+const PriceRow = ({
+  id,
+  label,
+  price,
+  priceValue,
+  note,
+}: {
+  id: string;
+  label: string;
+  price: string;
+  priceValue: number;
+  note?: string;
+}) => {
+  const { addItem } = useCart();
+  const handleAdd = () => {
+    addItem({ id, name: `Dorper Sheep — ${label}`, price: priceValue, image: sheep1 });
+    toast.success(`Dorper Sheep (${label}) added to cart`);
+  };
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-md border border-border bg-muted/40 px-4 py-3">
+      <div className="min-w-0 flex-1">
+        <p className="text-sm font-semibold text-card-foreground">{label}</p>
+        {note && <p className="text-xs text-muted-foreground">{note}</p>}
+      </div>
+      <p className="font-serif text-lg font-bold text-primary">{price}</p>
+      <button
+        type="button"
+        onClick={handleAdd}
+        aria-label={`Add Dorper sheep ${label} to cart`}
+        className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground transition hover:brightness-110"
+      >
+        <Plus className="h-4 w-4" />
+      </button>
     </div>
-    <p className="font-serif text-lg font-bold text-primary">{price}</p>
-  </div>
-);
+  );
+};
 
 const DorperSheepSection = () => {
   return (
@@ -54,23 +84,23 @@ const DorperSheepSection = () => {
             </p>
 
             <div className="mt-5 grid gap-2.5">
-              <PriceRow label="5 Months Old" price="KSH 5,500" />
-              <PriceRow label="7 Months Old" price="KSH 8,000" />
-              <PriceRow label="10 Months Old" price="KSH 12,500" />
-              <PriceRow label="Female — Ready Pregnant" price="KSH 13,500" />
+              <PriceRow id="dorper-5m" label="5 Months Old" price="KSH 5,500" priceValue={5500} />
+              <PriceRow id="dorper-7m" label="7 Months Old" price="KSH 8,000" priceValue={8000} />
+              <PriceRow id="dorper-10m" label="10 Months Old" price="KSH 12,500" priceValue={12500} />
+              <PriceRow id="dorper-female-pregnant" label="Female — Ready Pregnant" price="KSH 13,500" priceValue={13500} />
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <a
                 href={whatsappLink(
-                  "Hello Delamare Farm! I'd like to inquire about your Dorper sheep (5m, 7m, 10m or ready-pregnant female). Please share details."
+                  "Hello Delamare Farm! I'd like to order Dorper sheep (5m, 7m, 10m or ready-pregnant female). Please share details."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cta px-4 py-3 text-sm font-bold text-cta-foreground transition hover:brightness-110"
               >
                 <MessageCircle className="h-4 w-4" />
-                Inquire on WhatsApp
+                Order Now
               </a>
               <a
                 href="tel:+254755700239"
