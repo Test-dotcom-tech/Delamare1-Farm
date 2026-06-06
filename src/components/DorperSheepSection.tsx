@@ -84,23 +84,23 @@ const DorperSheepSection = () => {
             </p>
 
             <div className="mt-5 grid gap-2.5">
-              <PriceRow label="5 Months Old" price="KSH 5,500" />
-              <PriceRow label="7 Months Old" price="KSH 8,000" />
-              <PriceRow label="10 Months Old" price="KSH 12,500" />
-              <PriceRow label="Female — Ready Pregnant" price="KSH 13,500" />
+              <PriceRow id="dorper-5m" label="5 Months Old" price="KSH 5,500" priceValue={5500} />
+              <PriceRow id="dorper-7m" label="7 Months Old" price="KSH 8,000" priceValue={8000} />
+              <PriceRow id="dorper-10m" label="10 Months Old" price="KSH 12,500" priceValue={12500} />
+              <PriceRow id="dorper-female-pregnant" label="Female — Ready Pregnant" price="KSH 13,500" priceValue={13500} />
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <a
                 href={whatsappLink(
-                  "Hello Delamare Farm! I'd like to inquire about your Dorper sheep (5m, 7m, 10m or ready-pregnant female). Please share details."
+                  "Hello Delamare Farm! I'd like to order Dorper sheep (5m, 7m, 10m or ready-pregnant female). Please share details."
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cta px-4 py-3 text-sm font-bold text-cta-foreground transition hover:brightness-110"
               >
                 <MessageCircle className="h-4 w-4" />
-                Inquire on WhatsApp
+                Order Now
               </a>
               <a
                 href="tel:+254755700239"
