@@ -18,6 +18,7 @@ import GirolandoHeifersSection from "@/components/GirolandoHeifersSection";
 import QuailSection from "@/components/QuailSection";
 import NapierSection from "@/components/NapierSection";
 import EggsSection from "@/components/EggsSection";
+import CapsicumSection from "@/components/CapsicumSection";
 import CowMatSection from "@/components/CowMatSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -166,6 +167,7 @@ const Index = () => {
       <GirolandoHeifersSection />
       <MaizeSection />
       <TomatoSection />
+      <CapsicumSection />
       <PotatoSection />
       <BirdsSection />
       <GuineaFowlSection />
