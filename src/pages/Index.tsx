@@ -178,14 +178,7 @@ const Index = () => {
 
       <FeedsSection />
       <GallerySection />
-      <NapierSection />
-      <EggsSection />
-      <CowMatSection />
-
-
-
-      <GallerySection />
-      <FeedsSection />
+      <ReviewsSection />
       <ReviewsSection />
       <ContactSection />
       <Footer />
