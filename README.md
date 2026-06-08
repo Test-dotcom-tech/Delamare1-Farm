@@ -1,5 +1,3 @@
-# Create README
-cat > README.md << 'EOF'
 # Delamare Farm E-commerce Platform
 
 Online marketplace for Delamare Farm Kenya - selling livestock, crops, and farm supplies nationwide.
