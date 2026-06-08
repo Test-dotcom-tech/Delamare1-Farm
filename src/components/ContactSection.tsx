@@ -26,7 +26,7 @@ const ContactSection = () => (
             <MessageCircle className="h-6 w-6 text-accent-foreground" />
           </div>
           <div>
-            <p className="text-sm text-primary-foreground/70">WhatsApp</p>
+            <p className="text-sm text-primary-foreground/70">Call</p>
             <p className="text-lg font-bold">{PHONE_DISPLAY}</p>
           </div>
         </a>
