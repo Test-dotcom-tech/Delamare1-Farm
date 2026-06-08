@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpeg";
+import ThemeToggle from "./ThemeToggle";
 
 const WHATSAPP_NUMBER = "254755700239";
 const PHONE_DISPLAY = "0755 700 239";
@@ -22,14 +23,17 @@ const Navbar = () => (
         <a href="/#gallery" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Gallery</a>
         <a href="/#contact" className="text-sm font-medium text-primary-foreground/80 transition hover:text-primary-foreground">Contact</a>
       </div>
-      <a
-        href={`tel:+${WHATSAPP_NUMBER}`}
-        className="flex items-center gap-2 rounded-lg bg-cta px-4 py-2 text-sm font-semibold text-cta-foreground transition hover:opacity-90"
-      >
-        <Phone className="h-4 w-4" />
-        <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
-        <span className="sm:hidden">Call</span>
-      </a>
+      <div className="flex items-center gap-2">
+        <ThemeToggle />
+        <a
+          href={`tel:+${WHATSAPP_NUMBER}`}
+          className="flex items-center gap-2 rounded-lg bg-cta px-4 py-2 text-sm font-semibold text-cta-foreground transition hover:opacity-90"
+        >
+          <Phone className="h-4 w-4" />
+          <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
+          <span className="sm:hidden">Call</span>
+        </a>
+      </div>
     </div>
   </nav>
 );
