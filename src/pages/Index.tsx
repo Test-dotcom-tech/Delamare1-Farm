@@ -177,7 +177,8 @@ const Index = () => {
       <NapierSection />
       <EggsSection />
       <CowMatSection />
-      <PalletsSection />
+      <WoodenPalletsSection />
+      <PlasticPalletsSection />
 
 
 
