@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useParams, Link, Navigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, ShoppingCart, MapPin, Tag, Activity, Calendar, CheckCircle2, ChevronLeft } from "lucide-react";
 import { Navbar, whatsappLink } from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useCart } from "@/context/CartContext";
 import { getProductBySlug, products, formatKES, productPriceLabel } from "@/data/products";
 import { toast } from "sonner";
+import { useTrackConversion } from "@/hooks/useTrackConversion";
 
 const SITE_URL = "https://www.delamarefarm.co.ke";
 
@@ -17,6 +18,14 @@ const ProductPage = () => {
   const [imgIdx, setImgIdx] = useState(0);
   const [qty, setQty] = useState(1);
   const { addItem } = useCart();
+  const { trackPageView, trackClick } = useTrackConversion();
+
+  // Track page view when product page loads
+  useEffect(() => {
+    if (product) {
+      trackPageView();
+    }
+  }, [product, trackPageView]);
 
   if (!product) return <Navigate to="/404" replace />;
 
@@ -25,6 +34,9 @@ const ProductPage = () => {
   const hasPrice = product.price > 0;
 
   const handleAdd = () => {
+    // Track conversion when adding to cart or requesting quote
+    trackClick();
+    
     if (!hasPrice) {
       window.open(whatsappLink(`Hello Delamare Farm! I'd like a quote for ${product.name}.`), "_blank", "noopener,noreferrer");
       return;
@@ -34,6 +46,12 @@ const ProductPage = () => {
       qty
     );
     toast.success(`${product.name} added to cart`);
+  };
+
+  const handleWhatsAppOrder = () => {
+    // Track conversion when ordering via WhatsApp
+    trackClick();
+    window.open(whatsappOrder, "_blank", "noopener,noreferrer");
   };
 
   const whatsappOrder = whatsappLink(
@@ -90,6 +108,17 @@ const ProductPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(productJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        
+        {/* Google Ads Conversion Tracking - Page View */}
+        <script>
+          {`
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18366126842/BiNVCI6MvtocEPq107VE',
+              'value': 1.0,
+              'currency': 'KES'
+            });
+          `}
+        </script>
       </Helmet>
 
       <Navbar />
@@ -169,9 +198,11 @@ const ProductPage = () => {
                 {hasPrice ? "Add to Cart" : "Request Quote"}
               </button>
               <a
-                href={whatsappOrder}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleWhatsAppOrder();
+                }}
                 className="inline-flex items-center gap-2 rounded-lg bg-cta px-5 py-3 font-bold text-cta-foreground transition hover:brightness-110"
               >
                 <MessageCircle className="h-5 w-5" />
