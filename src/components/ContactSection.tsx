@@ -1,5 +1,6 @@
 import { Mail, MessageCircle, Clock } from "lucide-react";
 import { whatsappLink, PHONE_DISPLAY } from "./Navbar";
+import GoogleMap from "./GoogleMap";
 
 export const FARM_EMAIL = "delamare@delamarefarm.co.ke";
 
@@ -52,6 +53,7 @@ const ContactSection = () => (
           </div>
         </div>
       </div>
+      <GoogleMap />
     </div>
   </section>
 );
