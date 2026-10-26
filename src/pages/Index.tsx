@@ -40,7 +40,7 @@ const Index = () => {
     image: `${SITE_URL}/favicon.jpeg`,
     "@id": SITE_URL,
     url: SITE_URL,
-    telephone: "+254755700239",
+    telephone: "0101024658",
     priceRange: "KSH",
     address: { "@type": "PostalAddress", addressLocality: "Naivasha", addressCountry: "KE" },
     areaServed: { "@type": "Country", name: "Kenya" },
