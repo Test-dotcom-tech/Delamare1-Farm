@@ -205,7 +205,7 @@ const DorperSheepSection = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg border border-primary bg-background px-4 py-3 text-sm font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
               >
                 <Phone className="h-4 w-4" />
-                Call 0755 700 239
+                call 0101024658
               </a>
             </div>
 
