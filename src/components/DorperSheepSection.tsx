@@ -218,7 +218,7 @@ const DorperSheepSection = () => {
             )}
 
             <p className="mt-4 text-center text-xs text-muted-foreground">
-              📍 Delamere Farm Shop, Naivasha · ☎️ +254 755 700 239
+              📍 Delamere Farm Shop, Naivasha · ☎️ 0101024658
             </p>
           </div>
         </div>

@@ -164,7 +164,7 @@ const PalletsSection = () => {
         </div>
 
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          📍 Delamare Farm, Naivasha · ☎️ +254 755 700 239 · Countrywide delivery
+          📍 Delamare Farm, Naivasha · ☎️ 0101024658 · Countrywide delivery
         </p>
       </div>
     </section>
